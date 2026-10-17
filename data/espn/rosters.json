@@ -1,0 +1,1291 @@
+{
+ "source": "workbook",
+ "season": 2026,
+ "updated": "2026-10-17",
+ "teams": {
+  "renbarger": [
+   {
+    "name": "James Cook",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Jameson Williams",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Hunter Henry",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Denver",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "Cam Skattebo",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Tyler Shough",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Tucker Kraft",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Cedric Tillman",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Keon Coleman",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Saquon Barkley",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Malik Nabers",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Zay Flowers",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Fernando Mendoza",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Malik Willis",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Jacoby Brissett",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Jaylen Warren",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Najee Harris",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Tampa Bay",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "JJ McCarthy",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Will Reichard",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Matt Gay",
+    "pos": "",
+    "espn_id": null
+   }
+  ],
+  "andersen": [
+   {
+    "name": "Justin Herbert",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Nico Collins",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Omarion Hampton",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Dak Prescott",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Jadarian Price",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Travis Etienne",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Carnell Tate",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Parker Washington",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Rico Dowdle",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Jordyn Tyson",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Isaiah Likely",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Denzel Boston",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Cyrus Allen",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Chris Bell",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Nicholas Singleton",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Kansas",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "Ted Hurst",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Juwan Johnson",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Dominic Zvada",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Evan McPherson",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Emanuel Wilson",
+    "pos": "",
+    "espn_id": null
+   }
+  ],
+  "b_mcmillan": [
+   {
+    "name": "Drake Maye",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Jaxson Dart",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Rome Odunze",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Jacory Croskey-Merritt",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Rhamondre Stevenson",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Jakobi Meyers",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Romeo Doubs",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Blake Corum",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Christian Watson",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Alec Pierce",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Woody Marks",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "LA Rams",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "Jason Myers",
+    "pos": "K",
+    "espn_id": null
+   },
+   {
+    "name": "Ray Davis",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Jameis Winston",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Mark Andrews",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Tyreek Hill",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Jets",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Joe Milton III",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Kendrick Bourne",
+    "pos": "",
+    "espn_id": null
+   }
+  ],
+  "k_mcmillan": [
+   {
+    "name": "Chase Brown",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Sam LaPorta",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Rashee Rice",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Josh Downs",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Caleb Williams",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Matthew Stafford",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Ladd McConkey",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Bucky Irving",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Michael Penix Jr",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Ashton Jeanty",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Tetairoa McMillan",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Luther Burden III",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Isaac TeSlaa",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "RJ Harvey",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Jake Bates",
+    "pos": "K",
+    "espn_id": null
+   },
+   {
+    "name": "Jalen McMillan",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Jacksonville",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "Jalen Nailor",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Khalil Shakir",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Brenton Strange",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Chase McLaughlin",
+    "pos": "",
+    "espn_id": null
+   }
+  ],
+  "tusa_chen": [
+   {
+    "name": "Jayden Daniels",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Terry McLaurin",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Jaylen Waddle",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Tyler Warren",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Terrance Ferguson",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Jeremiyah Love",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "CJ Stroud",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Cam Ward",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "KC Concepcion",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Makai Lemon",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Antonio Williams",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Demond Claiborne",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Cade Klubnik",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Mac Jones",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Dontayvion Wicks",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Zachariah Branch",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Colts",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Dylan Sampson",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Ollie Gordon II",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Kendre Miller",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Dameon Pierce",
+    "pos": "",
+    "espn_id": null
+   }
+  ],
+  "turowsky": [
+   {
+    "name": "Rachaad White",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Trey McBride",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "De'Von Achane",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Brian Thomas Jr",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Sam Darnold",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "David Montgomery",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Jordan Addison",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Courtland Sutton",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Zach Charbonnet",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Josh Jacobs",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Pat Bryant",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Keenan Allen",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Marvin Harrison Jr",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Matthew Golden",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "MarShawn Lloyd",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Jonah Coleman",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Minnesota",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "Cam Little",
+    "pos": "K",
+    "espn_id": null
+   }
+  ],
+  "armijo_pendleton": [
+   {
+    "name": "Jahmyr Gibbs",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Kyler Murray",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Bo Nix",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "JK Dobbins",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Emeka Egbuka",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Shedeur Sanders",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Harold Fannin Jr",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Justin Jefferson",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Deshaun Watson",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Kyle Monangai",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Kenyon Sadiq",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Jalen Coker",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Keaton Mitchell",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Drew Allar",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Kaelon Black",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Pittsburgh",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "Caleb Douglas",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Kalif Raymond",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Raiders",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Spencer Shrader",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Buffalo",
+    "pos": "",
+    "espn_id": null
+   }
+  ],
+  "talaric_patch": [
+   {
+    "name": "Brock Bowers",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Bryce Young",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Rashid Shaheed",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "TreVeyon Henderson",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Patrick Mahomes",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Brian Robinson Jr",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Tyjae Spears",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Amon-Ra St. Brown",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "CeeDee Lamb",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Kenneth Walker",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Jonathon Brooks",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Geno Smith",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Xavier Worthy",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Wan'Dale Robinson",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Ty Simpson",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Tre' Harris",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Ka'imi Fairbairn",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Jaylen Wright",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "DK Metcalf",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Panthers",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Jalon Daniels",
+    "pos": "",
+    "espn_id": null
+   }
+  ],
+  "turner": [
+   {
+    "name": "Breece Hall",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Drake London",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Baker Mayfield",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Lamar Jackson",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Daniel Jones",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "D'Andre Swift",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Bhayshul Tuten",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "DeVonta Smith",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Davante Adams",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Travis Kelce",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Michael Wilson",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Alvin Kamara",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Quentin Johnston",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Emmett Johnson",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Rashod Bateman",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "TJ Hockenson",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Adonai Mitchell",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Tyler Huntley",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Giants",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Tre Tucker",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Nick Folk",
+    "pos": "",
+    "espn_id": null
+   }
+  ],
+  "bubernak": [
+   {
+    "name": "Kyren Williams",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Josh Allen",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Bijan Robinson",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Christian McCaffrey",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Michael Pittman Jr",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Chris Godwin Jr",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Kyle Pitts Sr",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Patriots",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "AJ Brown",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Jalen Hurts",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Tee Higgins",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "De'Zhaun Stribling",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Omar Cooper Jr",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Ja'Kobi Lane",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Germie Bernard",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Malachi Fields",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Blake Grupe",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Tanner McKee",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "49ers",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Dallas Goedert",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Devaughn Vele",
+    "pos": "",
+    "espn_id": null
+   }
+  ],
+  "stone": [
+   {
+    "name": "Chuba Hubbard",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Puka Nacua",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Jonathan Taylor",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Derrick Henry",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Brandon Aubrey",
+    "pos": "K",
+    "espn_id": null
+   },
+   {
+    "name": "Jared Goff",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "George Pickens",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Aaron Rodgers",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Texans",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "Dalton Kincaid",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Brock Purdy",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "DJ Moore",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Tua Tagovailoa",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "George Kittle",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Kirk Cousins",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Stefon Diggs",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Eddy Pineiro",
+    "pos": "K",
+    "espn_id": null
+   },
+   {
+    "name": "Baltimore",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "Kayshon Boutte",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Malik Washington",
+    "pos": "",
+    "espn_id": null
+   },
+   {
+    "name": "Braelon Allen",
+    "pos": "",
+    "espn_id": null
+   }
+  ],
+  "sands": [
+   {
+    "name": "Garrett Wilson",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Jordan Love",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Mike Evans",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Quinshon Judkins",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Aaron Jones",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Chris Olave",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Javonte Williams",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Chris Rodriguez Jr",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Seahawks",
+    "pos": "D/ST",
+    "espn_id": null
+   },
+   {
+    "name": "Joe Burrow",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Ja'Marr Chase",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Tony Pollard",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Jordan Mason",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Mike Washington",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Kenny Gainwell",
+    "pos": "RB",
+    "espn_id": null
+   },
+   {
+    "name": "Carson Beck",
+    "pos": "QB",
+    "espn_id": null
+   },
+   {
+    "name": "Deebo Samuel",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Calvin Ridley",
+    "pos": "WR",
+    "espn_id": null
+   },
+   {
+    "name": "Jake Ferguson",
+    "pos": "TE",
+    "espn_id": null
+   },
+   {
+    "name": "Cairo Santos",
+    "pos": "K",
+    "espn_id": null
+   },
+   {
+    "name": "Drew Lock",
+    "pos": "",
+    "espn_id": null
+   }
+  ]
+ }
+}
