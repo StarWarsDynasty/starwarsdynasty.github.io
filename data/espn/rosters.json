@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-10-17T21:49:08+00:00",
+ "updated": "2026-10-17T22:52:19+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -2607,7 +2607,7 @@
    "points_for": 670.5400000000001
   },
   "turner": {
-   "team_name": "Revenge of T-Swift",
+   "team_name": "Revenge of the Swift",
    "wins": 3,
    "losses": 2,
    "ties": 0,
