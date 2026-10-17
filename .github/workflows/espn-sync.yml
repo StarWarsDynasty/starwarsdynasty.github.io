@@ -1,0 +1,45 @@
+name: ESPN sync
+
+on:
+  schedule:
+    - cron: "17 11 * * *"   # daily, 4:17 AM Pacific (11:17 UTC)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Report only, do not commit changes"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: espn-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Pull from ESPN
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+        run: python scripts/fetch_espn.py ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commit changes
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "espn-sync"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "ESPN sync $(date -u +%Y-%m-%d)"
+          git push
