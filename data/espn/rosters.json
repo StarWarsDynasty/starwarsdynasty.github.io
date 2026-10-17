@@ -1,0 +1,2638 @@
+{
+ "source": "espn",
+ "season": 2026,
+ "updated": "2026-10-17T21:49:08+00:00",
+ "draft_complete": true,
+ "teams": {
+  "renbarger": [
+   {
+    "espn_id": "4696981",
+    "name": "Cam Skattebo",
+    "pos": "RB",
+    "nfl": "NYG",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4360689",
+    "name": "Tyler Shough",
+    "pos": "QB",
+    "nfl": "NO",
+    "slot": "SFLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4369863",
+    "name": "Cedric Tillman",
+    "pos": "WR",
+    "nfl": "NO",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4635008",
+    "name": "Keon Coleman",
+    "pos": "WR",
+    "nfl": "BUF",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "-16007",
+    "name": "Broncos D/ST",
+    "pos": "D/ST",
+    "nfl": "DEN",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3046439",
+    "name": "Hunter Henry",
+    "pos": "TE",
+    "nfl": "NE",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4572680",
+    "name": "Tucker Kraft",
+    "pos": "TE",
+    "nfl": "GB",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3929630",
+    "name": "Saquon Barkley",
+    "pos": "RB",
+    "nfl": "PHI",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4595348",
+    "name": "Malik Nabers",
+    "pos": "WR",
+    "nfl": "NYG",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "2578570",
+    "name": "Jacoby Brissett",
+    "pos": "QB",
+    "nfl": "ARI",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4837248",
+    "name": "Fernando Mendoza",
+    "pos": "QB",
+    "nfl": "LV",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4429615",
+    "name": "Zay Flowers",
+    "pos": "WR",
+    "nfl": "BAL",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4569987",
+    "name": "Jaylen Warren",
+    "pos": "RB",
+    "nfl": "PIT",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4242512",
+    "name": "Malik Willis",
+    "pos": "QB",
+    "nfl": "MIA",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "-16027",
+    "name": "Buccaneers D/ST",
+    "pos": "D/ST",
+    "nfl": "TB",
+    "slot": "Bench",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4433970",
+    "name": "J.J. McCarthy",
+    "pos": "QB",
+    "nfl": "NYG",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4241457",
+    "name": "Najee Harris",
+    "pos": "RB",
+    "nfl": "NYG",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4379399",
+    "name": "James Cook III",
+    "pos": "RB",
+    "nfl": "BUF",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1790061510065
+   },
+   {
+    "espn_id": "4426388",
+    "name": "Jameson Williams",
+    "pos": "WR",
+    "nfl": "DET",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1791444187029
+   },
+   {
+    "espn_id": "4567104",
+    "name": "Will Reichard",
+    "pos": "K",
+    "nfl": "MIN",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1791445012150
+   },
+   {
+    "espn_id": "4249087",
+    "name": "Matt Gay",
+    "pos": "K",
+    "nfl": "LV",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792049467726
+   }
+  ],
+  "andersen": [
+   {
+    "espn_id": "4038941",
+    "name": "Justin Herbert",
+    "pos": "QB",
+    "nfl": "LAC",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4685382",
+    "name": "Omarion Hampton",
+    "pos": "RB",
+    "nfl": "LAC",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4258173",
+    "name": "Nico Collins",
+    "pos": "WR",
+    "nfl": "HOU",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "2577417",
+    "name": "Dak Prescott",
+    "pos": "QB",
+    "nfl": "DAL",
+    "slot": "SFLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4685512",
+    "name": "Jadarian Price",
+    "pos": "RB",
+    "nfl": "SEA",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4239996",
+    "name": "Travis Etienne Jr.",
+    "pos": "RB",
+    "nfl": "NO",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4871023",
+    "name": "Carnell Tate",
+    "pos": "WR",
+    "nfl": "TEN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4432620",
+    "name": "Parker Washington",
+    "pos": "WR",
+    "nfl": "JAX",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4361050",
+    "name": "Isaiah Likely",
+    "pos": "TE",
+    "nfl": "NYG",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4038815",
+    "name": "Rico Dowdle",
+    "pos": "RB",
+    "nfl": "PIT",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4832800",
+    "name": "Denzel Boston",
+    "pos": "WR",
+    "nfl": "CLE",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "-16012",
+    "name": "Chiefs D/ST",
+    "pos": "D/ST",
+    "nfl": "KC",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4880281",
+    "name": "Jordyn Tyson",
+    "pos": "WR",
+    "nfl": "NO",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4912218",
+    "name": "Cyrus Allen",
+    "pos": "WR",
+    "nfl": "KC",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4869961",
+    "name": "Chris Bell",
+    "pos": "WR",
+    "nfl": "MIA",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4685555",
+    "name": "Nicholas Singleton",
+    "pos": "RB",
+    "nfl": "TEN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "5220680",
+    "name": "Ted Hurst III",
+    "pos": "WR",
+    "nfl": "TB",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3929645",
+    "name": "Juwan Johnson",
+    "pos": "TE",
+    "nfl": "NO",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4360234",
+    "name": "Evan McPherson",
+    "pos": "K",
+    "nfl": "CIN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1789629296947
+   },
+   {
+    "espn_id": "4887558",
+    "name": "Emanuel Wilson",
+    "pos": "RB",
+    "nfl": "SEA",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1790236057195
+   },
+   {
+    "espn_id": "5082424",
+    "name": "Dominic Zvada",
+    "pos": "K",
+    "nfl": "NYG",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792049467726
+   }
+  ],
+  "b_mcmillan": [
+   {
+    "espn_id": "4569173",
+    "name": "Rhamondre Stevenson",
+    "pos": "RB",
+    "nfl": "NE",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4723086",
+    "name": "Colston Loveland",
+    "pos": "TE",
+    "nfl": "CHI",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3916433",
+    "name": "Jakobi Meyers",
+    "pos": "WR",
+    "nfl": "JAX",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4429096",
+    "name": "Blake Corum",
+    "pos": "RB",
+    "nfl": "LAR",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4689114",
+    "name": "Jaxson Dart",
+    "pos": "QB",
+    "nfl": "NYG",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4431452",
+    "name": "Drake Maye",
+    "pos": "QB",
+    "nfl": "NE",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4360078",
+    "name": "Alec Pierce",
+    "pos": "WR",
+    "nfl": "IND",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "2473037",
+    "name": "Jason Myers",
+    "pos": "K",
+    "nfl": "SEA",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4248528",
+    "name": "Christian Watson",
+    "pos": "WR",
+    "nfl": "GB",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4429501",
+    "name": "Ray Davis",
+    "pos": "RB",
+    "nfl": "BUF",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "-16014",
+    "name": "Rams D/ST",
+    "pos": "D/ST",
+    "nfl": "LAR",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4429059",
+    "name": "Woody Marks",
+    "pos": "RB",
+    "nfl": "HOU",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "2969939",
+    "name": "Jameis Winston",
+    "pos": "QB",
+    "nfl": "NYG",
+    "slot": "SFLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3116365",
+    "name": "Mark Andrews",
+    "pos": "TE",
+    "nfl": "BAL",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4361432",
+    "name": "Romeo Doubs",
+    "pos": "WR",
+    "nfl": "NE",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1787942567665
+   },
+   {
+    "espn_id": "4575131",
+    "name": "Jacory Croskey-Merritt",
+    "pos": "RB",
+    "nfl": "WSH",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "TRADE",
+    "acq_date": 1790061510065
+   },
+   {
+    "espn_id": "3116406",
+    "name": "Tyreek Hill",
+    "pos": "WR",
+    "nfl": "FA",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "ADD",
+    "acq_date": 1790867065071
+   },
+   {
+    "espn_id": "4431299",
+    "name": "Rome Odunze",
+    "pos": "WR",
+    "nfl": "CHI",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1791444187029
+   },
+   {
+    "espn_id": "-16020",
+    "name": "Jets D/ST",
+    "pos": "D/ST",
+    "nfl": "NYJ",
+    "slot": "Bench",
+    "injury": "",
+    "acq_type": "ADD",
+    "acq_date": 1791458735662
+   },
+   {
+    "espn_id": "3045523",
+    "name": "Kendrick Bourne",
+    "pos": "WR",
+    "nfl": "ARI",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1791656699590
+   },
+   {
+    "espn_id": "4360698",
+    "name": "Joe Milton III",
+    "pos": "QB",
+    "nfl": "PHI",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792259365490
+   }
+  ],
+  "k_mcmillan": [
+   {
+    "espn_id": "5123663",
+    "name": "Isaac TeSlaa",
+    "pos": "WR",
+    "nfl": "DET",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "12483",
+    "name": "Matthew Stafford",
+    "pos": "QB",
+    "nfl": "LAR",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4360423",
+    "name": "Michael Penix Jr.",
+    "pos": "QB",
+    "nfl": "ATL",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4596448",
+    "name": "Bucky Irving",
+    "pos": "RB",
+    "nfl": "TB",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4685472",
+    "name": "Tetairoa McMillan",
+    "pos": "WR",
+    "nfl": "CAR",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4428331",
+    "name": "Rashee Rice",
+    "pos": "WR",
+    "nfl": "KC",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4430027",
+    "name": "Sam LaPorta",
+    "pos": "TE",
+    "nfl": "DET",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4688813",
+    "name": "Josh Downs",
+    "pos": "WR",
+    "nfl": "IND",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4890973",
+    "name": "Ashton Jeanty",
+    "pos": "RB",
+    "nfl": "LV",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4431611",
+    "name": "Caleb Williams",
+    "pos": "QB",
+    "nfl": "CHI",
+    "slot": "SFLEX",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4685278",
+    "name": "Luther Burden III",
+    "pos": "WR",
+    "nfl": "CHI",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4362238",
+    "name": "Chase Brown",
+    "pos": "RB",
+    "nfl": "CIN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4612826",
+    "name": "Ladd McConkey",
+    "pos": "WR",
+    "nfl": "LAC",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4568490",
+    "name": "RJ Harvey",
+    "pos": "RB",
+    "nfl": "DEN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4689936",
+    "name": "Jake Bates",
+    "pos": "K",
+    "nfl": "DET",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4430834",
+    "name": "Jalen McMillan",
+    "pos": "WR",
+    "nfl": "TB",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "-16030",
+    "name": "Jaguars D/ST",
+    "pos": "D/ST",
+    "nfl": "JAX",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4382466",
+    "name": "Jalen Nailor",
+    "pos": "WR",
+    "nfl": "LV",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4373678",
+    "name": "Khalil Shakir",
+    "pos": "WR",
+    "nfl": "BUF",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4430539",
+    "name": "Brenton Strange",
+    "pos": "TE",
+    "nfl": "JAX",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792049467725
+   },
+   {
+    "espn_id": "3150744",
+    "name": "Chase McLaughlin",
+    "pos": "K",
+    "nfl": "TB",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792085421404
+   }
+  ],
+  "tusa_chen": [
+   {
+    "espn_id": "4570037",
+    "name": "Terrance Ferguson",
+    "pos": "TE",
+    "nfl": "LAR",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4431459",
+    "name": "Tyler Warren",
+    "pos": "TE",
+    "nfl": "IND",
+    "slot": "TE",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3121422",
+    "name": "Terry McLaurin",
+    "pos": "WR",
+    "nfl": "WSH",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4372016",
+    "name": "Jaylen Waddle",
+    "pos": "WR",
+    "nfl": "DEN",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4426348",
+    "name": "Jayden Daniels",
+    "pos": "QB",
+    "nfl": "WSH",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4688380",
+    "name": "Cam Ward",
+    "pos": "QB",
+    "nfl": "TEN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4432577",
+    "name": "C.J. Stroud",
+    "pos": "QB",
+    "nfl": "HOU",
+    "slot": "SFLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4832846",
+    "name": "Demond Claiborne",
+    "pos": "RB",
+    "nfl": "MIN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4685413",
+    "name": "Cade Klubnik",
+    "pos": "QB",
+    "nfl": "NYJ",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4241464",
+    "name": "Mac Jones",
+    "pos": "QB",
+    "nfl": "SF",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4428850",
+    "name": "Dontayvion Wicks",
+    "pos": "WR",
+    "nfl": "PHI",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4870612",
+    "name": "Zachariah Branch",
+    "pos": "WR",
+    "nfl": "ATL",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4711533",
+    "name": "Ollie Gordon II",
+    "pos": "RB",
+    "nfl": "MIA",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1790839422060
+   },
+   {
+    "espn_id": "4599739",
+    "name": "Kendre Miller",
+    "pos": "RB",
+    "nfl": "NO",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1790975037417
+   },
+   {
+    "espn_id": "-16011",
+    "name": "Colts D/ST",
+    "pos": "D/ST",
+    "nfl": "IND",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "ADD",
+    "acq_date": 1792049467725
+   },
+   {
+    "espn_id": "4360238",
+    "name": "Dameon Pierce",
+    "pos": "RB",
+    "nfl": "PHI",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792049467726
+   },
+   {
+    "espn_id": "5081397",
+    "name": "Dylan Sampson",
+    "pos": "RB",
+    "nfl": "CLE",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "ADD",
+    "acq_date": 1792049467728
+   },
+   {
+    "espn_id": "5081432",
+    "name": "Antonio Williams",
+    "pos": "WR",
+    "nfl": "WSH",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1792087623769
+   },
+   {
+    "espn_id": "4870653",
+    "name": "KC Concepcion",
+    "pos": "WR",
+    "nfl": "CLE",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1792087623769
+   },
+   {
+    "espn_id": "4870795",
+    "name": "Makai Lemon",
+    "pos": "WR",
+    "nfl": "PHI",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1792087623769
+   },
+   {
+    "espn_id": "4870808",
+    "name": "Jeremiyah Love",
+    "pos": "RB",
+    "nfl": "ARI",
+    "slot": "RB",
+    "injury": "OUT",
+    "acq_type": "TRADE",
+    "acq_date": 1792097765653
+   }
+  ],
+  "turowsky": [
+   {
+    "espn_id": "3128429",
+    "name": "Courtland Sutton",
+    "pos": "WR",
+    "nfl": "DEN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4432773",
+    "name": "Brian Thomas Jr.",
+    "pos": "WR",
+    "nfl": "JAX",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "15818",
+    "name": "Keenan Allen",
+    "pos": "WR",
+    "nfl": "IND",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4429160",
+    "name": "De'Von Achane",
+    "pos": "RB",
+    "nfl": "MIA",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4035538",
+    "name": "David Montgomery",
+    "pos": "RB",
+    "nfl": "HOU",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4697815",
+    "name": "Rachaad White",
+    "pos": "RB",
+    "nfl": "WSH",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4426385",
+    "name": "Zach Charbonnet",
+    "pos": "RB",
+    "nfl": "SEA",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4600981",
+    "name": "Pat Bryant",
+    "pos": "WR",
+    "nfl": "DEN",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4360310",
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "nfl": "JAX",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4429205",
+    "name": "Jordan Addison",
+    "pos": "WR",
+    "nfl": "MIN",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3912547",
+    "name": "Sam Darnold",
+    "pos": "QB",
+    "nfl": "SEA",
+    "slot": "SFLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4047365",
+    "name": "Josh Jacobs",
+    "pos": "RB",
+    "nfl": "GB",
+    "slot": "Bench",
+    "injury": "DAY_TO_DAY",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4373626",
+    "name": "Tyler Allgeier",
+    "pos": "RB",
+    "nfl": "ARI",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4361307",
+    "name": "Trey McBride",
+    "pos": "TE",
+    "nfl": "ARI",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4430878",
+    "name": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "nfl": "SEA",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4432708",
+    "name": "Marvin Harrison Jr.",
+    "pos": "WR",
+    "nfl": "HOU",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4686361",
+    "name": "Cam Little",
+    "pos": "K",
+    "nfl": "JAX",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "-16016",
+    "name": "Vikings D/ST",
+    "pos": "D/ST",
+    "nfl": "MIN",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4701936",
+    "name": "Matthew Golden",
+    "pos": "WR",
+    "nfl": "GB",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4429023",
+    "name": "MarShawn Lloyd",
+    "pos": "RB",
+    "nfl": "GB",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4702555",
+    "name": "Jonah Coleman",
+    "pos": "RB",
+    "nfl": "DEN",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   }
+  ],
+  "armijo_pendleton": [
+   {
+    "espn_id": "4429795",
+    "name": "Jahmyr Gibbs",
+    "pos": "RB",
+    "nfl": "DET",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4426338",
+    "name": "Bo Nix",
+    "pos": "QB",
+    "nfl": "DEN",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4241985",
+    "name": "J.K. Dobbins",
+    "pos": "RB",
+    "nfl": "DEN",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4567750",
+    "name": "Emeka Egbuka",
+    "pos": "WR",
+    "nfl": "TB",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4432762",
+    "name": "Shedeur Sanders",
+    "pos": "QB",
+    "nfl": "CLE",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "5083076",
+    "name": "Harold Fannin Jr.",
+    "pos": "TE",
+    "nfl": "CLE",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4262921",
+    "name": "Justin Jefferson",
+    "pos": "WR",
+    "nfl": "MIN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3122840",
+    "name": "Deshaun Watson",
+    "pos": "QB",
+    "nfl": "CLE",
+    "slot": "SFLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "-16023",
+    "name": "Steelers D/ST",
+    "pos": "D/ST",
+    "nfl": "PIT",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4596334",
+    "name": "Keaton Mitchell",
+    "pos": "RB",
+    "nfl": "LAC",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "5083315",
+    "name": "Kenyon Sadiq",
+    "pos": "TE",
+    "nfl": "NYJ",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4608686",
+    "name": "Kyle Monangai",
+    "pos": "RB",
+    "nfl": "CHI",
+    "slot": "RB",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4714771",
+    "name": "Drew Allar",
+    "pos": "QB",
+    "nfl": "PIT",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4696044",
+    "name": "Kaelon Black",
+    "pos": "RB",
+    "nfl": "SF",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4869645",
+    "name": "Caleb Douglas",
+    "pos": "WR",
+    "nfl": "MIA",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4695883",
+    "name": "Jalen Coker",
+    "pos": "WR",
+    "nfl": "CAR",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3917315",
+    "name": "Kyler Murray",
+    "pos": "QB",
+    "nfl": "MIN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1787942567665
+   },
+   {
+    "espn_id": "-16002",
+    "name": "Bills D/ST",
+    "pos": "D/ST",
+    "nfl": "BUF",
+    "slot": "Bench",
+    "injury": "",
+    "acq_type": "ADD",
+    "acq_date": 1790839422062
+   },
+   {
+    "espn_id": "4571557",
+    "name": "Spencer Shrader",
+    "pos": "K",
+    "nfl": "IND",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1790860147776
+   },
+   {
+    "espn_id": "-16013",
+    "name": "Raiders D/ST",
+    "pos": "D/ST",
+    "nfl": "LV",
+    "slot": "Bench",
+    "injury": "",
+    "acq_type": "ADD",
+    "acq_date": 1791445012149
+   },
+   {
+    "espn_id": "2973405",
+    "name": "Kalif Raymond",
+    "pos": "WR",
+    "nfl": "CHI",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1791723910134
+   }
+  ],
+  "talaric_patch": [
+   {
+    "espn_id": "4241474",
+    "name": "Brian Robinson Jr.",
+    "pos": "RB",
+    "nfl": "ATL",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4032473",
+    "name": "Rashid Shaheed",
+    "pos": "WR",
+    "nfl": "SEA",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4432710",
+    "name": "TreVeyon Henderson",
+    "pos": "RB",
+    "nfl": "NE",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4432665",
+    "name": "Brock Bowers",
+    "pos": "TE",
+    "nfl": "LV",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3139477",
+    "name": "Patrick Mahomes",
+    "pos": "QB",
+    "nfl": "KC",
+    "slot": "SFLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4428557",
+    "name": "Tyjae Spears",
+    "pos": "RB",
+    "nfl": "TEN",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4685720",
+    "name": "Bryce Young",
+    "pos": "QB",
+    "nfl": "CAR",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4241389",
+    "name": "CeeDee Lamb",
+    "pos": "WR",
+    "nfl": "DAL",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4374302",
+    "name": "Amon-Ra St. Brown",
+    "pos": "WR",
+    "nfl": "DET",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4567048",
+    "name": "Kenneth Walker III",
+    "pos": "RB",
+    "nfl": "KC",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "15864",
+    "name": "Geno Smith",
+    "pos": "QB",
+    "nfl": "NYJ",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4678008",
+    "name": "Jonathon Brooks",
+    "pos": "RB",
+    "nfl": "CAR",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4569587",
+    "name": "Wan'Dale Robinson",
+    "pos": "WR",
+    "nfl": "TEN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4683062",
+    "name": "Xavier Worthy",
+    "pos": "WR",
+    "nfl": "KC",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4685522",
+    "name": "Ty Simpson",
+    "pos": "QB",
+    "nfl": "LAR",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4686612",
+    "name": "Tre' Harris",
+    "pos": "WR",
+    "nfl": "LAC",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4047650",
+    "name": "DK Metcalf",
+    "pos": "WR",
+    "nfl": "PIT",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1790406633342
+   },
+   {
+    "espn_id": "4596472",
+    "name": "Jalon Daniels",
+    "pos": "QB",
+    "nfl": "TB",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1790839422061
+   },
+   {
+    "espn_id": "4682745",
+    "name": "Jaylen Wright",
+    "pos": "RB",
+    "nfl": "MIA",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1790956338167
+   },
+   {
+    "espn_id": "2971573",
+    "name": "Ka'imi Fairbairn",
+    "pos": "K",
+    "nfl": "HOU",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1791617811107
+   },
+   {
+    "espn_id": "-16029",
+    "name": "Panthers D/ST",
+    "pos": "D/ST",
+    "nfl": "CAR",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "ADD",
+    "acq_date": 1792096744797
+   }
+  ],
+  "turner": [
+   {
+    "espn_id": "4427366",
+    "name": "Breece Hall",
+    "pos": "RB",
+    "nfl": "NYJ",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4426502",
+    "name": "Drake London",
+    "pos": "WR",
+    "nfl": "ATL",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3052587",
+    "name": "Baker Mayfield",
+    "pos": "QB",
+    "nfl": "TB",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4882093",
+    "name": "Bhayshul Tuten",
+    "pos": "RB",
+    "nfl": "JAX",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3916387",
+    "name": "Lamar Jackson",
+    "pos": "QB",
+    "nfl": "BAL",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4259545",
+    "name": "D'Andre Swift",
+    "pos": "RB",
+    "nfl": "CHI",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3917792",
+    "name": "Daniel Jones",
+    "pos": "QB",
+    "nfl": "IND",
+    "slot": "SFLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4241478",
+    "name": "DeVonta Smith",
+    "pos": "WR",
+    "nfl": "PHI",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "16800",
+    "name": "Davante Adams",
+    "pos": "WR",
+    "nfl": "LAR",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "15847",
+    "name": "Travis Kelce",
+    "pos": "TE",
+    "nfl": "KC",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4360761",
+    "name": "Michael Wilson",
+    "pos": "WR",
+    "nfl": "ARI",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4429025",
+    "name": "Quentin Johnston",
+    "pos": "WR",
+    "nfl": "LAC",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4832955",
+    "name": "Emmett Johnson",
+    "pos": "RB",
+    "nfl": "KC",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3054850",
+    "name": "Alvin Kamara",
+    "pos": "RB",
+    "nfl": "NO",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4360939",
+    "name": "Rashod Bateman",
+    "pos": "WR",
+    "nfl": "BAL",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4036133",
+    "name": "T.J. Hockenson",
+    "pos": "TE",
+    "nfl": "MIN",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4597500",
+    "name": "Adonai Mitchell",
+    "pos": "WR",
+    "nfl": "NYJ",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4428718",
+    "name": "Tre Tucker",
+    "pos": "WR",
+    "nfl": "LV",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1790236057195
+   },
+   {
+    "espn_id": "4035671",
+    "name": "Tyler Huntley",
+    "pos": "QB",
+    "nfl": "BAL",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1791445012148
+   },
+   {
+    "espn_id": "-16019",
+    "name": "Giants D/ST",
+    "pos": "D/ST",
+    "nfl": "NYG",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "ADD",
+    "acq_date": 1792059747041
+   },
+   {
+    "espn_id": "10621",
+    "name": "Nick Folk",
+    "pos": "K",
+    "nfl": "ATL",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792059888119
+   }
+  ],
+  "bubernak": [
+   {
+    "espn_id": "-16017",
+    "name": "Patriots D/ST",
+    "pos": "D/ST",
+    "nfl": "NE",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3918298",
+    "name": "Josh Allen",
+    "pos": "QB",
+    "nfl": "BUF",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4430737",
+    "name": "Kyren Williams",
+    "pos": "RB",
+    "nfl": "LAR",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "4035687",
+    "name": "Michael Pittman Jr.",
+    "pos": "WR",
+    "nfl": "PIT",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221993
+   },
+   {
+    "espn_id": "3116165",
+    "name": "Chris Godwin Jr.",
+    "pos": "WR",
+    "nfl": "TB",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4360248",
+    "name": "Kyle Pitts Sr.",
+    "pos": "TE",
+    "nfl": "ATL",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3117251",
+    "name": "Christian McCaffrey",
+    "pos": "RB",
+    "nfl": "SF",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4040715",
+    "name": "Jalen Hurts",
+    "pos": "QB",
+    "nfl": "PHI",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4710714",
+    "name": "De'Zhaun Stribling",
+    "pos": "WR",
+    "nfl": "SF",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4723820",
+    "name": "Omar Cooper Jr.",
+    "pos": "WR",
+    "nfl": "NYJ",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4870847",
+    "name": "Ja'Kobi Lane",
+    "pos": "WR",
+    "nfl": "BAL",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4685261",
+    "name": "Germie Bernard",
+    "pos": "WR",
+    "nfl": "PIT",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4682648",
+    "name": "Malachi Fields",
+    "pos": "WR",
+    "nfl": "NYG",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4569559",
+    "name": "Devaughn Vele",
+    "pos": "WR",
+    "nfl": "NO",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1789629296945
+   },
+   {
+    "espn_id": "4239993",
+    "name": "Tee Higgins",
+    "pos": "WR",
+    "nfl": "CIN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1789906386599
+   },
+   {
+    "espn_id": "3121023",
+    "name": "Dallas Goedert",
+    "pos": "TE",
+    "nfl": "PHI",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1791484842264
+   },
+   {
+    "espn_id": "-16025",
+    "name": "49ers D/ST",
+    "pos": "D/ST",
+    "nfl": "SF",
+    "slot": "Bench",
+    "injury": "",
+    "acq_type": "ADD",
+    "acq_date": 1792049467725
+   },
+   {
+    "espn_id": "4047646",
+    "name": "A.J. Brown",
+    "pos": "WR",
+    "nfl": "NE",
+    "slot": "WR",
+    "injury": "QUESTIONABLE",
+    "acq_type": "TRADE",
+    "acq_date": 1792087623769
+   },
+   {
+    "espn_id": "4685201",
+    "name": "Tanner McKee",
+    "pos": "QB",
+    "nfl": "PHI",
+    "slot": "SFLEX",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1792087623769
+   },
+   {
+    "espn_id": "4259619",
+    "name": "Blake Grupe",
+    "pos": "K",
+    "nfl": "LAR",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792087655161
+   },
+   {
+    "espn_id": "4430807",
+    "name": "Bijan Robinson",
+    "pos": "RB",
+    "nfl": "ATL",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1792097765653
+   }
+  ],
+  "stone": [
+   {
+    "espn_id": "4426515",
+    "name": "Puka Nacua",
+    "pos": "WR",
+    "nfl": "LAR",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4426354",
+    "name": "George Pickens",
+    "pos": "WR",
+    "nfl": "DAL",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "-16034",
+    "name": "Texans D/ST",
+    "pos": "D/ST",
+    "nfl": "HOU",
+    "slot": "Bench",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3046779",
+    "name": "Jared Goff",
+    "pos": "QB",
+    "nfl": "DET",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "8439",
+    "name": "Aaron Rodgers",
+    "pos": "QB",
+    "nfl": "PIT",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3043078",
+    "name": "Derrick Henry",
+    "pos": "RB",
+    "nfl": "BAL",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4241416",
+    "name": "Chuba Hubbard",
+    "pos": "RB",
+    "nfl": "CAR",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4385690",
+    "name": "Dalton Kincaid",
+    "pos": "TE",
+    "nfl": "BUF",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3953687",
+    "name": "Brandon Aubrey",
+    "pos": "K",
+    "nfl": "DAL",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4242335",
+    "name": "Jonathan Taylor",
+    "pos": "RB",
+    "nfl": "IND",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4361741",
+    "name": "Brock Purdy",
+    "pos": "QB",
+    "nfl": "SF",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4034949",
+    "name": "Eddy Pineiro",
+    "pos": "K",
+    "nfl": "SF",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3915416",
+    "name": "DJ Moore",
+    "pos": "WR",
+    "nfl": "BUF",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3040151",
+    "name": "George Kittle",
+    "pos": "TE",
+    "nfl": "SF",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "14880",
+    "name": "Kirk Cousins",
+    "pos": "QB",
+    "nfl": "LV",
+    "slot": "SFLEX",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "-16033",
+    "name": "Ravens D/ST",
+    "pos": "D/ST",
+    "nfl": "BAL",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "2976212",
+    "name": "Stefon Diggs",
+    "pos": "WR",
+    "nfl": "WSH",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4241479",
+    "name": "Tua Tagovailoa",
+    "pos": "QB",
+    "nfl": "ATL",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4685247",
+    "name": "Braelon Allen",
+    "pos": "RB",
+    "nfl": "NYJ",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1789629296947
+   },
+   {
+    "espn_id": "4569603",
+    "name": "Malik Washington",
+    "pos": "WR",
+    "nfl": "MIA",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1790896286611
+   },
+   {
+    "espn_id": "4429022",
+    "name": "Kayshon Boutte",
+    "pos": "WR",
+    "nfl": "HOU",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1791445012151
+   }
+  ],
+  "sands": [
+   {
+    "espn_id": "4685702",
+    "name": "Quinshon Judkins",
+    "pos": "RB",
+    "nfl": "CLE",
+    "slot": "SFLEX",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "16737",
+    "name": "Mike Evans",
+    "pos": "WR",
+    "nfl": "SF",
+    "slot": "FLEX",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4036378",
+    "name": "Jordan Love",
+    "pos": "QB",
+    "nfl": "GB",
+    "slot": "QB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4569618",
+    "name": "Garrett Wilson",
+    "pos": "WR",
+    "nfl": "NYJ",
+    "slot": "WR",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4361370",
+    "name": "Chris Olave",
+    "pos": "WR",
+    "nfl": "NO",
+    "slot": "WR",
+    "injury": "QUESTIONABLE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4362619",
+    "name": "Chris Rodriguez Jr.",
+    "pos": "RB",
+    "nfl": "JAX",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4361579",
+    "name": "Javonte Williams",
+    "pos": "RB",
+    "nfl": "DAL",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "-16026",
+    "name": "Seahawks D/ST",
+    "pos": "D/ST",
+    "nfl": "SEA",
+    "slot": "D/ST",
+    "injury": "",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3042519",
+    "name": "Aaron Jones Sr.",
+    "pos": "RB",
+    "nfl": "MIN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4362628",
+    "name": "Ja'Marr Chase",
+    "pos": "WR",
+    "nfl": "CIN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3915511",
+    "name": "Joe Burrow",
+    "pos": "QB",
+    "nfl": "CIN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3916148",
+    "name": "Tony Pollard",
+    "pos": "RB",
+    "nfl": "TEN",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4371733",
+    "name": "Kenny Gainwell",
+    "pos": "RB",
+    "nfl": "TB",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4360569",
+    "name": "Jordan Mason",
+    "pos": "RB",
+    "nfl": "MIN",
+    "slot": "Bench",
+    "injury": "INJURY_RESERVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3126486",
+    "name": "Deebo Samuel Sr.",
+    "pos": "WR",
+    "nfl": "SF",
+    "slot": "Bench",
+    "injury": "OUT",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3925357",
+    "name": "Calvin Ridley",
+    "pos": "WR",
+    "nfl": "TEN",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4430841",
+    "name": "Carson Beck",
+    "pos": "QB",
+    "nfl": "ARI",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4686658",
+    "name": "Mike Washington Jr.",
+    "pos": "RB",
+    "nfl": "LV",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "4242355",
+    "name": "Jake Ferguson",
+    "pos": "TE",
+    "nfl": "DAL",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "17427",
+    "name": "Cairo Santos",
+    "pos": "K",
+    "nfl": "CHI",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "DRAFT",
+    "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "3924327",
+    "name": "Drew Lock",
+    "pos": "QB",
+    "nfl": "SEA",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1789629296944
+   }
+  ]
+ },
+ "records": {
+  "renbarger": {
+   "team_name": "Dark Helmet",
+   "wins": 3,
+   "losses": 2,
+   "ties": 0,
+   "points_for": 595.64
+  },
+  "andersen": {
+   "team_name": "The Trash Compactor",
+   "wins": 3,
+   "losses": 2,
+   "ties": 0,
+   "points_for": 538.3199999999999
+  },
+  "b_mcmillan": {
+   "team_name": "Padawan McJarJar",
+   "wins": 1,
+   "losses": 4,
+   "ties": 0,
+   "points_for": 516.6800000000001
+  },
+  "k_mcmillan": {
+   "team_name": "Jeanty Fett",
+   "wins": 3,
+   "losses": 2,
+   "ties": 0,
+   "points_for": 630.02
+  },
+  "tusa_chen": {
+   "team_name": "Wookies of the Year",
+   "wins": 1,
+   "losses": 4,
+   "ties": 0,
+   "points_for": 537.8
+  },
+  "turowsky": {
+   "team_name": "Salacious B Crumb",
+   "wins": 2,
+   "losses": 3,
+   "ties": 0,
+   "points_for": 602.22
+  },
+  "armijo_pendleton": {
+   "team_name": "Denver Dewbacks",
+   "wins": 2,
+   "losses": 3,
+   "ties": 0,
+   "points_for": 567.5600000000001
+  },
+  "talaric_patch": {
+   "team_name": "Manorwood Moffs",
+   "wins": 3,
+   "losses": 2,
+   "ties": 0,
+   "points_for": 670.5400000000001
+  },
+  "turner": {
+   "team_name": "Revenge of T-Swift",
+   "wins": 3,
+   "losses": 2,
+   "ties": 0,
+   "points_for": 593.8
+  },
+  "bubernak": {
+   "team_name": "The McCaffalorian",
+   "wins": 1,
+   "losses": 4,
+   "ties": 0,
+   "points_for": 626.88
+  },
+  "stone": {
+   "team_name": "Angry Ewoks",
+   "wins": 5,
+   "losses": 0,
+   "ties": 0,
+   "points_for": 792.34
+  },
+  "sands": {
+   "team_name": "Qui-gon Judkins",
+   "wins": 3,
+   "losses": 2,
+   "ties": 0,
+   "points_for": 625.16
+  }
+ }
+}

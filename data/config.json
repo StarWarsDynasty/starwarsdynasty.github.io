@@ -1,0 +1,14 @@
+{
+  "league_name": "Star Wars: The Dynasty Awakens",
+  "espn_league_id": 92546,
+  "current_season": 2026,
+  "first_season": 2015,
+  "salary_cap": 300,
+  "extension_step": 5,
+  "roster_limit": 21,
+  "chronicler": "Alex Turner",
+  "marks": {
+    "*": "Contracts not in effect.",
+    "**": "Co-champions due to a tie in the championship."
+  }
+}
