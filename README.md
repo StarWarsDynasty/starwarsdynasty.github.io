@@ -1,6 +1,6 @@
 # The Dynasty Awakens
 
-League site for the Star Wars dynasty fantasy football league. Served by GitHub Pages at https://starwarsdynasty.github.io.
+League site for the Star Wars themed dynasty salary cap fantasy football league: https://starwarsdynasty.github.io.
 
 The site is static. It reads the files in `data/` and computes every salary, budget, and dead-money figure in the browser. A nightly GitHub Action pulls rosters from ESPN.
 
