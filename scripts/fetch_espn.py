@@ -92,6 +92,8 @@ def get(season, league, views, cookies):
     url = API.format(season=season, league=league)
     r = requests.get(url, params=[("view", v) for v in views], cookies=cookies,
                      headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+    if r.status_code == 404:
+        return None  # season not created on ESPN yet (league not renewed)
     if r.status_code in (401, 403):
         sys.exit(f"ESPN returned {r.status_code}. The espn_s2/SWID cookies have "
                  "probably expired. Update the ESPN_S2 and ESPN_SWID repo secrets.")
@@ -111,6 +113,16 @@ def main(dry_run=False):
     today = now.date().isoformat()
 
     data = get(season, league, ["mTeam", "mRoster", "mSettings", "mDraftDetail"], cookies)
+    if data is None:
+        print(f"ESPN has no {season} season for this league yet (not renewed). Nothing to sync.")
+        report_path = ESPN_DIR / "report.json"
+        rep = {"updated": now.isoformat(timespec="seconds"), "season": season,
+               "warnings": [f"ESPN has not renewed the league for {season} yet. "
+                            "Rosters shown are from the last season ESPN returned."],
+               "unmatched_contracts": [], "unmatched_teams": []}
+        if not dry_run:
+            report_path.write_text(json.dumps(rep, indent=1))
+        return
     ESPN_DIR.mkdir(parents=True, exist_ok=True)
     (ESPN_DIR / "raw_latest.json").write_text(json.dumps(data))  # not committed; see .gitignore
 

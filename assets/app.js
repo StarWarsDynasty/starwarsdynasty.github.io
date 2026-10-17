@@ -73,7 +73,16 @@ async function loadAll() {
 
 const CUR = () => D.cfg.current_season;
 // The draft that matters now: this season's if ESPN says it hasn't happened yet.
-const UPCOMING = () => (D.rosters?.source === "espn" && D.rosters.draft_complete === false ? CUR() : CUR() + 1);
+// ESPN records, only when they belong to the current season.
+const liveRecords = () => (D.rosters?.source === "espn" && D.rosters.season === CUR() ? D.rosters.records || {} : {});
+
+// Before ESPN has data for the current season, its draft is still ahead.
+const UPCOMING = () => {
+  const r = D.rosters;
+  if (!r || r.source !== "espn") return CUR() + 1;
+  if (r.season < CUR() || r.draft_complete === false) return CUR();
+  return CUR() + 1;
+};
 const STEP = () => D.cfg.extension_step;
 
 const lastYear = (c) => c.draft_year + 1 + c.years;
@@ -150,10 +159,15 @@ function currentRoster(fid) {
   const active = D.contracts.filter((c) => c.franchise === fid && c.status === "active"
     && (y <= lastYear(c) || (!c.years && y === c.draft_year + 2)));
   const used = new Set();
+  // Contracts that ended but whose players are still on the ESPN roster (offseason).
+  const ended = D.contracts.filter((c) => c.franchise === fid && !active.includes(c) && c.status !== "released" && lastYear(c) < y);
   const players = (D.rosters?.teams?.[fid] || []).map((p) => {
-    let c = active.find((k) => !used.has(k) && k.espn_id && p.espn_id && String(k.espn_id) === String(p.espn_id));
-    if (!c) c = active.find((k) => !used.has(k) && norm(k.player) === norm(p.name));
+    const same = (k) => (k.espn_id && p.espn_id ? String(k.espn_id) === String(p.espn_id) : norm(k.player) === norm(p.name));
+    let c = active.find((k) => !used.has(k) && same(k));
     if (c) used.add(c);
+    if (!c && ended.some(same)) {
+      return { p, c: null, cost: 0, st: { key: "fa", label: "Contract ended", rank: 0.5 } };
+    }
     const st = c ? statusIn(c, y) : { key: "fa", label: "Free agent", rank: 0 };
     return { p, c, cost: c && st.key !== "d" ? costIn(c, y) : 0, st };
   });
@@ -236,10 +250,11 @@ function pageHistory() {
   let roll = "";
   const cur = CUR();
   if (!years.includes(cur)) {
-    const recs = D.rosters?.source === "espn" ? D.rosters.records || {} : {};
-    const lead = Object.entries(recs).sort((a, b) => b[1].wins - a[1].wins || b[1].points_for - a[1].points_for)[0];
+    const recs = liveRecords();
+    const before = UPCOMING() === cur;  // draft not held yet
+    const lead = before ? null : Object.entries(recs).sort((a, b) => b[1].wins - a[1].wins || b[1].points_for - a[1].points_for)[0];
     roll += `<li class="pending"><div class="yr">${cur}</div><div class="champ">
-      <div class="champ-name">Season in progress</div>
+      <div class="champ-name">${before ? "Offseason. The draft approaches." : "Season in progress"}</div>
       ${lead ? `<div class="owner">Leading the galaxy: ${teamLink(lead[0], lead[1].team_name)} at ${record(lead[1].wins, lead[1].losses, lead[1].ties)}</div>` : ""}
       </div></li>`;
   }
@@ -302,7 +317,7 @@ function pageHistory() {
 
 function pageTeams() {
   const next = UPCOMING();
-  const recs = D.rosters?.source === "espn" ? D.rosters.records || {} : {};
+  const recs = liveRecords();
   const tiles = D.franchises.map((f) => {
     const now = teamYear(f.id, CUR());
     const nx = teamYear(f.id, next);
@@ -333,13 +348,13 @@ function pageTeam(fid, mode, planStr) {
   const nx = teamYear(fid, next, cs), nxBase = teamYear(fid, next);
   const { players, missing } = currentRoster(fid);
   const espn = D.rosters?.source === "espn";
-  const rec = espn ? D.rosters.records?.[fid] : null;
+  const rec = liveRecords()[fid];
   const nMoves = Object.keys(plan).length;
   const was = (a, b) => (planning && a !== b ? `<small class="was">was ${money(b)}</small>` : "");
 
   // One planner control per roster row, depending on the player's status now.
   function control(c, st) {
-    if (!c) return `<span class="dim">Leaves after ${cur}</span>`;
+    if (!c) return `<span class="dim">No contract</span>`;
     const k = planKey(c), mv = plan[k] || "";
     const id = `mv-${k}`;
     if (st.key === "c") {

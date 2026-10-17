@@ -73,8 +73,8 @@ If the sync fails with a 401 or 403, the cookies expired. Copy fresh ones from F
 
 In order:
 
-1. **After the season:** add the final standings to `seasons.csv`. Update owners in `franchises.csv` if anyone changed.
-2. **When ESPN renews the league:** set `current_season` in `config.json`, then run the sync once (Actions → ESPN sync → Run workflow). This records every roster before anyone is dropped, so the sync can tell who gets cut. Contracts that ran out are marked expired.
+1. **After the season (spring):** add the final standings to `seasons.csv`, update owners in `franchises.csv` if anyone changed, and set `current_season` in `config.json` to the new season. The site switches to the upcoming draft: expiring contracts show as ended, Year B players show as "Extend or release," and budgets are for the new draft. Until ESPN renews the league, the nightly sync skips and `report.json` says so.
+2. **ESPN renews the league:** nothing to do. The next nightly sync picks it up and records every roster. Before anyone drops players, check that one sync has run since the renewal (`report.json` no longer says "has not renewed"), or run it by hand from the Actions tab.
 3. **Keepers submitted, non-keepers dropped in ESPN:** the next sync releases them. Rookie deals and expired contracts cost nothing. A contract with years left owes dead money starting this season.
 4. **Enter extensions:** set `years` in `contracts.csv` for each Year B player who was kept. Until then they show as "Extend or release" and don't count against the budget.
 5. **Before the draft:** use the Salary cap page for each team's ESPN keeper values and budget.
