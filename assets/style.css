@@ -85,6 +85,7 @@ section { margin-top: 3rem; }
 .hero { padding: 1rem 0 0; }
 .hero h1 { color: var(--text); }
 .hero .lede { margin-top: .75rem; font-size: 1.0625rem; }
+.hero .crawl { color: var(--steel); font-size: 1.125rem; line-height: 1.45; margin: 1rem 0 .75rem; }
 
 /* ---------- Roll of champions ---------- */
 .roll { list-style: none; margin: 1.5rem 0 0; padding: 0; position: relative; }
