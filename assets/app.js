@@ -257,7 +257,7 @@ function pageHistory() {
   app.innerHTML = `
     <div class="hero">
       <h1>${esc(D.cfg.league_name)}</h1>
-      <p class="lede">Twelve franchises, ${done} completed seasons since ${D.cfg.first_season}. Superflex, half-point PPR, $${D.cfg.salary_cap} salary cap, contracts that follow you around.</p>
+      <p class="lede">Twelve franchises, ${done} years.</p>
     </div>
     <section aria-labelledby="h-roll">
       <h2 id="h-roll">Supreme Chancellors</h2>
