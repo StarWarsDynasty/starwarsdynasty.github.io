@@ -1,6 +1,6 @@
 # The Dynasty Awakens
 
-League site for the Star Wars themed dynasty salary cap fantasy football league: https://starwarsdynasty.github.io.
+League site for the Star Wars dynasty fantasy football league. Served by GitHub Pages at https://starwarsdynasty.github.io.
 
 The site is static. It reads the files in `data/` and computes every salary, budget, and dead-money figure in the browser. A nightly GitHub Action pulls rosters from ESPN.
 
@@ -71,12 +71,14 @@ If the sync fails with a 401 or 403, the cookies expired. Copy fresh ones from F
 
 ## New season checklist
 
-1. Add last season's final standings to `seasons.csv`.
-2. Update owners in `franchises.csv` if anyone changed. Team names update from ESPN.
-3. Enter extensions in `contracts.csv`.
-4. Set `current_season` in `config.json`.
-5. Run the sync. Expired contracts are marked automatically.
-6. Use the Salary cap page to enter keeper values in ESPN.
+In order:
+
+1. **After the season:** add the final standings to `seasons.csv`. Update owners in `franchises.csv` if anyone changed.
+2. **When ESPN renews the league:** set `current_season` in `config.json`, then run the sync once (Actions → ESPN sync → Run workflow). This records every roster before anyone is dropped, so the sync can tell who gets cut. Contracts that ran out are marked expired.
+3. **Keepers submitted, non-keepers dropped in ESPN:** the next sync releases them. Rookie deals and expired contracts cost nothing. A contract with years left owes dead money starting this season.
+4. **Enter extensions:** set `years` in `contracts.csv` for each Year B player who was kept. Until then they show as "Extend or release" and don't count against the budget.
+5. **Before the draft:** use the Salary cap page for each team's ESPN keeper values and budget.
+6. **After the draft:** the next sync adds every drafted player at his winning bid as Year A. Check `data/espn/report.json`. "Kept but has no contract length" means step 4 was missed for that player.
 
 ## Planning mode
 

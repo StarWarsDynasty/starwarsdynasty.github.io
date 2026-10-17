@@ -72,6 +72,8 @@ async function loadAll() {
 /* ================= Model ================= */
 
 const CUR = () => D.cfg.current_season;
+// The draft that matters now: this season's if ESPN says it hasn't happened yet.
+const UPCOMING = () => (D.rosters?.source === "espn" && D.rosters.draft_complete === false ? CUR() : CUR() + 1);
 const STEP = () => D.cfg.extension_step;
 
 const lastYear = (c) => c.draft_year + 1 + c.years;
@@ -125,7 +127,7 @@ function teamYear(fid, y, cs = D.contracts) {
     .filter((c) => c.status === "active" && c.draft_year <= y && y <= lastYear(c))
     .map((c) => ({ c, cost: costIn(c, y), st: statusIn(c, y) }))
     .sort((a, b) => b.st.rank - a.st.rank || b.cost - a.cost);
-  const pending = mine.filter((c) => c.status === "active" && !c.years && y === c.draft_year + 2 && y > CUR());
+  const pending = mine.filter((c) => c.status === "active" && !c.years && y === c.draft_year + 2);
   const dead = mine
     .filter((c) => c.status === "released" && c.years && c.dead_from && c.dead_from <= y && y <= lastYear(c))
     .map((c) => ({ c, amt: deadPerYear(c) }));
@@ -145,13 +147,15 @@ const norm = (s) => s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase()
 // Current roster: ESPN (or workbook bootstrap) joined to contracts.
 function currentRoster(fid) {
   const y = CUR();
-  const active = D.contracts.filter((c) => c.franchise === fid && c.status === "active" && y <= lastYear(c));
+  const active = D.contracts.filter((c) => c.franchise === fid && c.status === "active"
+    && (y <= lastYear(c) || (!c.years && y === c.draft_year + 2)));
   const used = new Set();
   const players = (D.rosters?.teams?.[fid] || []).map((p) => {
     let c = active.find((k) => !used.has(k) && k.espn_id && p.espn_id && String(k.espn_id) === String(p.espn_id));
     if (!c) c = active.find((k) => !used.has(k) && norm(k.player) === norm(p.name));
     if (c) used.add(c);
-    return { p, c, cost: c ? costIn(c, y) : 0, st: c ? statusIn(c, y) : { key: "fa", label: "Free agent", rank: 0 } };
+    const st = c ? statusIn(c, y) : { key: "fa", label: "Free agent", rank: 0 };
+    return { p, c, cost: c && st.key !== "d" ? costIn(c, y) : 0, st };
   });
   const missing = active.filter((c) => !used.has(c));
   players.sort((a, b) => b.st.rank - a.st.rank || b.cost - a.cost || a.p.name.localeCompare(b.p.name));
@@ -297,7 +301,7 @@ function pageHistory() {
 }
 
 function pageTeams() {
-  const next = CUR() + 1;
+  const next = UPCOMING();
   const recs = D.rosters?.source === "espn" ? D.rosters.records || {} : {};
   const tiles = D.franchises.map((f) => {
     const now = teamYear(f.id, CUR());
@@ -323,7 +327,7 @@ function pageTeam(fid, mode, planStr) {
   const planning = mode === "plan";
   const plan = planning ? parsePlan(planStr) : {};
   const cs = planning ? applyPlan(fid, plan) : D.contracts;
-  const cur = CUR(), next = cur + 1;
+  const cur = CUR(), next = UPCOMING();
   const sum0 = franchiseSummary(fid);
   const now = teamYear(fid, cur, cs), base = teamYear(fid, cur);
   const nx = teamYear(fid, next, cs), nxBase = teamYear(fid, next);
@@ -342,7 +346,7 @@ function pageTeam(fid, mode, planStr) {
       return `<select id="${id}" data-k="${esc(k)}" aria-label="Move for ${esc(c.player)}">
         <option value="">Keep</option><option value="c" ${mv === "c" ? "selected" : ""}>Cut</option></select>`;
     }
-    if (st.key === "b") {
+    if (st.key === "b" || st.key === "d") {
       const yrs = mv.startsWith("e") ? mv.slice(1) : "";
       return `<select id="${id}" data-k="${esc(k)}" aria-label="Move for ${esc(c.player)}">
           <option value="">Decide later</option>
@@ -362,7 +366,7 @@ function pageTeam(fid, mode, planStr) {
       return `<span class="neg">Dead ${money(deadPerYear(c))}/yr, ${cur}–${lastYear(c)}</span>`;
     }
     const x = { ...c, years: parseInt(mv.slice(1), 10) || 1 };
-    return `${money(annualCost(x))}/yr, ${next}–${lastYear(x)}`;
+    return `${money(annualCost(x))}/yr, ${c.draft_year + 2}–${lastYear(x)}`;
   }
 
   const planned = new Map(cs.filter((c) => c.franchise === fid).map((c) => [planKey(c), c]));
@@ -379,12 +383,12 @@ function pageTeam(fid, mode, planStr) {
     <td class="num">${c ? c.draft_year : ""}</td>
     <td class="num">${c ? money(c.price) : ""}</td>
     <td class="num">${c?.years ? `${c.years} yr` : ""}</td>`}
-    <td class="num">${money(mv === "c" ? 0 : cost)}</td>
-    <td class="num">${pc ? lastYear(pc) : ""}</td></tr>`;
+    <td class="num">${st.key === "d" && !mv ? `<span class="dim">TBD</span>` : money(mv === "c" ? 0 : (mv ? costIn(pc, cur) : cost))}</td>
+    <td class="num">${pc && !(st.key === "d" && !mv) ? lastYear(pc) : ""}</td></tr>`;
   }).join("");
   const preCols = (espn && !planning ? 1 : 0) + 3 + (espn ? 1 : 0) + (planning ? 2 : 3);
 
-  const futureYears = [cur, next, next + 1, next + 2, next + 3];
+  const futureYears = [...new Set([cur, next, next + 1, next + 2, next + 3])];
   const deadRows = cs.filter((c) => c.franchise === fid && c.status === "released" && c.years && c.dead_from && lastYear(c) >= cur)
     .map((c) => `<tr><td>${esc(c.player)}${planning && plan[planKey(c)] ? ` <span class="council">planned</span>` : ""}</td><td class="num">${money(annualCost(c))}</td><td class="num neg">${money(deadPerYear(c))}</td><td class="num">${c.dead_from}–${lastYear(c)}</td></tr>`).join("");
   const tradeRows = D.trades.filter((t) => (t.from === fid || t.to === fid) && t.draft_year >= next)
@@ -408,7 +412,7 @@ function pageTeam(fid, mode, planStr) {
   const projRows = futureYears.map((y) => {
     const t = teamYear(fid, y, cs), b = teamYear(fid, y);
     const d = t.budget - b.budget;
-    return `<tr><td class="num">${y === cur ? `${y} season` : y}</td><td class="num">${t.keepers.length}</td><td class="num">${money(t.committed)}</td>
+    return `<tr><td class="num">${y === cur && y !== next ? `${y} season` : y}</td><td class="num">${t.keepers.length}</td><td class="num">${money(t.committed)}</td>
       <td class="num ${t.deadSum ? "neg" : ""}">${money(t.deadSum)}</td><td class="num">${signed(t.net)}</td>
       <td class="num ${t.budget < 0 ? "neg" : ""}"><b>${money(t.budget)}</b></td>
       ${planning ? `<td class="num ${d < 0 ? "neg" : d > 0 ? "pos" : "dim"}">${d ? signed(d) : "none"}</td>` : ""}</tr>`;
@@ -463,7 +467,7 @@ function pageTeam(fid, mode, planStr) {
         </tbody></table></div>
       ${nx.pending.length && !planning ? `
         <h3 style="margin-top:1.5rem">Extend or release before the ${next} draft</h3>
-        <p class="note">These players finish Year B in ${cur}. Annual cost by contract length. Use <a href="#/team/${fid}/plan">Plan moves</a> to try any length.</p>
+        <p class="note">These players' rookie deals end after ${next - 1}. Annual cost by contract length. Use <a href="#/team/${fid}/plan">Plan moves</a> to try any length.</p>
         <div class="table-wrap"><table>
           <thead><tr><th>Player</th><th>Pos</th><th class="num">Price</th><th class="num">1 yr</th><th class="num">2 yr</th><th class="num">3 yr</th><th class="num">4 yr</th></tr></thead>
           <tbody>${pendingRows}</tbody></table></div>` : ""}
@@ -522,8 +526,8 @@ function pageTeam(fid, mode, planStr) {
 function pageCap(yParam) {
   const cur = CUR();
   const years = [cur, cur + 1, cur + 2, cur + 3];
-  const y = years.includes(+yParam) ? +yParam : cur + 1;
-  const isDraft = y > cur;
+  const y = years.includes(+yParam) ? +yParam : UPCOMING();
+  const isDraft = y >= UPCOMING();
   const data = D.franchises.map((f) => ({ f, t: teamYear(f.id, y) }));
 
   const rows = data.map(({ f, t }) => `<tr>
@@ -554,7 +558,7 @@ function pageCap(yParam) {
     <h1>Salary cap</h1>
     <p class="lede">The $${D.cfg.salary_cap} cap is enforced only at the auction draft. Traded cap and dead money count toward the draft year they belong to.</p>
     <div class="controls"><span class="dim">Show</span><div class="seg" role="group" aria-label="Year">
-      ${years.map((v) => `<button type="button" data-y="${v}" aria-pressed="${v === y}">${v === cur ? `${v} season` : `${v} draft`}</button>`).join("")}
+      ${years.map((v) => `<button type="button" data-y="${v}" aria-pressed="${v === y}">${v < UPCOMING() ? `${v} season` : `${v} draft`}</button>`).join("")}
     </div></div>
     <div class="table-wrap"><table id="cap">
       <thead><tr><th class="sortable">Team</th><th class="num sortable">Players</th><th class="num sortable">Salary</th>

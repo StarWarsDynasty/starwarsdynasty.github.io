@@ -219,9 +219,18 @@ def main(dry_run=False):
         last_year = dy + 1 + yrs
         pid = c["espn_id"]
         if last_year < season:
-            c["status"] = "expired"
-            log("expired", c["player"], c["franchise"], detail=f"last season {last_year}")
-            continue
+            # Year B players stay "extend or release" until the draft, so the
+            # commissioner can enter extensions after keepers are set.
+            still_here = pid and pid in where and where[pid][0] == c["franchise"]
+            if yrs == 0 and still_here:
+                if drafted:  # kept through the draft without an extension length
+                    report["warnings"].append(
+                        f"{c['player']} ({c['franchise']}) was kept but has no contract length. "
+                        "Set years in contracts.csv.")
+            else:
+                c["status"] = "expired"
+                log("expired", c["player"], c["franchise"], detail=f"last season {last_year}")
+                continue
         if not pid or not prev_ok:
             continue
         now_at = where.get(pid)
@@ -230,6 +239,9 @@ def main(dry_run=False):
             continue  # was not on a roster last time either; leave for review
         moved = now_at is None or now_at[1]["acq_date"] != was_at[1]["acq_date"]
         if not moved:
+            continue
+        # ESPN re-stamps keepers at the draft. Same team + DRAFT means kept, not dropped.
+        if now_at and now_at[0] == c["franchise"] and now_at[1]["acq_type"] == "DRAFT":
             continue
         if now_at and now_at[1]["acq_type"] == "TRADE":
             old = c["franchise"]
