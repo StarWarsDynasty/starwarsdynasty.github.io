@@ -7,7 +7,7 @@ draft results for the season in data/config.json, then updates:
   data/espn/report.json    matching problems and warnings
   data/contracts.csv       fills espn_id, moves traded players, releases
                            dropped players, adds newly drafted rookies
-  data/franchises.csv      fills espn_team_id
+  data/franchises.csv      fills espn_team_id, copies current team names
   data/events.csv          log of every automatic change
 
 Release detection compares against the previous ESPN snapshot, so nothing is
@@ -150,10 +150,16 @@ def main(dry_run=False):
 
     # ---- Rosters ----
     rosters, records, where = {}, {}, {}
+    fr_by_id = {f["id"]: f for f in franchises}
     for t in data["teams"]:
         fid = by_espn.get(str(t["id"]))
         if not fid:
             continue
+        # Current team names come from ESPN.
+        espn_name = team_name(t)
+        if espn_name and fr_by_id[fid]["team_name"] != espn_name:
+            log("rename", fr_by_id[fid]["team_name"], fid, detail=f"now {espn_name}")
+            fr_by_id[fid]["team_name"] = espn_name
         rec = t.get("record", {}).get("overall", {})
         records[fid] = {"team_name": team_name(t), "wins": rec.get("wins", 0),
                         "losses": rec.get("losses", 0), "ties": rec.get("ties", 0),

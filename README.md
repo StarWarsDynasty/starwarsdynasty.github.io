@@ -13,7 +13,7 @@ All in `data/`. Edit them in the GitHub web editor (open the file, click the pen
 | `contracts.csv` | One row per drafted player | Extensions, fixes |
 | `cap_trades.csv` | Cap money traded between teams | When a cap trade is reported |
 | `seasons.csv` | Final place and record for each franchise each season | After the season ends |
-| `franchises.csv` | Current team name and owners | Name or owner changes |
+| `franchises.csv` | Owners (team names come from ESPN nightly) | Owner changes |
 | `config.json` | Current season, cap, extension step | Once a year |
 
 ### contracts.csv
@@ -71,7 +71,7 @@ If the sync fails with a 401 or 403, the cookies expired. Copy fresh ones from F
 ## New season checklist
 
 1. Add last season's final standings to `seasons.csv`.
-2. Update team names and owners in `franchises.csv`.
+2. Update owners in `franchises.csv` if anyone changed. Team names update from ESPN.
 3. Enter extensions in `contracts.csv`.
 4. Set `current_season` in `config.json`.
 5. Run the sync. Expired contracts are marked automatically.
