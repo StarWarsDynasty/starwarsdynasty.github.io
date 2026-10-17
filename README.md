@@ -26,12 +26,12 @@ All in `data/`. Edit them in the GitHub web editor (open the file, click the pen
 | `price` | Winning auction bid. |
 | `years` | Extension length. Blank while on the rookie deal. |
 | `status` | `active`, `released`, or `expired`. |
-| `dead_from` | First draft year dead money applies. Set by the sync on release. |
+| `dead_from` | Season of the cut, when dead money starts. Set by the sync on release. |
 | `espn_id` | Filled by the sync. |
 
 **Extending a player:** set `years`. Example: Bhayshul Tuten, price 9, extended 3 years, gives a cost of 9 + 5 × 2 = $19 through 2029.
 
-**Releasing a player by hand:** set `status` to `released`. If he had an extension, set `dead_from` to the first draft his dead money counts toward.
+**Releasing a player by hand:** set `status` to `released`. If he had an extension, set `dead_from` to the season he was cut.
 
 ### cap_trades.csv
 
@@ -53,7 +53,7 @@ Add 12 rows after each season. `place` is a number. `mark` is `*` or `**` for th
 - Saves current rosters and records to `data/espn/rosters.json`.
 - Fills `espn_id` and `espn_team_id`.
 - Trade (ESPN acquisition type TRADE): moves the contract to the new team.
-- Drop: marks the contract `released`. Extensions get dead money starting at the next draft (or this draft, if it hasn't happened yet).
+- Drop: marks the contract `released`. Extended players owe dead money from the season of the cut through the contract's last year.
 - After the auction: adds a contract row for every non-keeper pick, at the winning bid.
 - Writes problems to `data/espn/report.json` and every change to `data/events.csv`.
 
@@ -76,3 +76,7 @@ If the sync fails with a 401 or 403, the cookies expired. Copy fresh ones from F
 4. Set `current_season` in `config.json`.
 5. Run the sync. Expired contracts are marked automatically.
 6. Use the Salary cap page to enter keeper values in ESPN.
+
+## Planning mode
+
+Each team page has a **Plan moves** button. Owners can try extensions, cuts, and releases and see the effect on every future draft. Nothing is saved. The scenario lives in the URL (`#/team/turner/plan/...`), so **Copy link to this plan** gives a link to share in Discord.

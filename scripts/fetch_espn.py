@@ -112,7 +112,7 @@ def main(dry_run=False):
 
     data = get(season, league, ["mTeam", "mRoster", "mSettings", "mDraftDetail"], cookies)
     ESPN_DIR.mkdir(parents=True, exist_ok=True)
-    (ESPN_DIR / "raw_latest.json").write_text(json.dumps(data, indent=1))
+    (ESPN_DIR / "raw_latest.json").write_text(json.dumps(data))  # not committed; see .gitignore
 
     franchises = read_csv(DATA / "franchises.csv")
     contracts = read_csv(DATA / "contracts.csv")
@@ -231,15 +231,12 @@ def main(dry_run=False):
             log("trade", c["player"], old, now_at[0], "contract moves with player")
         else:
             c["status"] = "released"
-            dead_from = season + 1 if drafted else season
-            if yrs > 0 and dead_from > last_year:
-                log("release", c["player"], c["franchise"],
-                    detail=f"contract ends after {last_year}, no dead money")
-            elif yrs > 0:
-                c["dead_from"] = str(dead_from)
+            # Dead money counts from the season of the cut through the contract's last year.
+            if yrs > 0:
+                c["dead_from"] = str(season)
                 cost = int(c["price"]) + cfg["extension_step"] * (yrs - 1)
                 log("release", c["player"], c["franchise"],
-                    detail=f"dead money ${cost // 2}/yr, drafts {c['dead_from']}-{last_year}")
+                    detail=f"dead money ${cost // 2}/yr, {season}-{last_year}")
             else:
                 log("release", c["player"], c["franchise"], detail="rookie deal, no dead money")
 
@@ -250,9 +247,11 @@ def main(dry_run=False):
         fid = by_espn.get(str(pick.get("teamId")))
         if pick.get("keeper") or pid in known or not fid:
             continue
-        name, pos = pid, ""
-        if pid in where:
-            name, pos = where[pid][1]["name"], where[pid][1]["pos"]
+        # Only players still on the team that drafted them. Picks that were
+        # dropped after the draft never get a contract.
+        if pid not in where or where[pid][0] != fid or where[pid][1]["acq_type"] != "DRAFT":
+            continue
+        name, pos = where[pid][1]["name"], where[pid][1]["pos"]
         contracts.append({"player": name, "pos": pos, "franchise": fid,
                           "draft_year": season, "price": pick.get("bidAmount", 0),
                           "years": "", "status": "active", "dead_from": "",
@@ -263,9 +262,12 @@ def main(dry_run=False):
     # ---- Keeper check after the draft ----
     if drafted:
         for pick in draft.get("picks", []):
-            if pick.get("keeper") and str(pick.get("playerId")) not in known:
+            pid = str(pick.get("playerId"))
+            fid = by_espn.get(str(pick.get("teamId")))
+            on_team = pid in where and where[pid][0] == fid and where[pid][1]["acq_type"] == "DRAFT"
+            if pick.get("keeper") and on_team and pid not in known:
                 report["warnings"].append(
-                    f"ESPN keeper {pick.get('playerId')} has no active contract.")
+                    f"ESPN keeper {where[pid][1]['name']} ({fid}) has no active contract.")
 
     # ---- Contracted players not on any roster ----
     for c in contracts:

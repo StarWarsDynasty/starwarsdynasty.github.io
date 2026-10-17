@@ -76,8 +76,9 @@ const lastYear = (c) => c.draft_year + 1 + c.years;
 const annualCost = (c) => c.price + (c.years ? STEP() * (c.years - 1) : 0);
 const yearsOn = (c, y) => y - c.draft_year + 1;
 
+// Extensions start after Year B, so the escalator applies from year 3 on.
 function costIn(c, y) {
-  return yearsOn(c, y) <= 1 ? c.price : annualCost(c);
+  return yearsOn(c, y) <= 2 ? c.price : annualCost(c);
 }
 
 function statusIn(c, y) {
@@ -90,9 +91,34 @@ function statusIn(c, y) {
 
 const deadPerYear = (c) => Math.floor(annualCost(c) / 2);
 
+/* ---------- Planner scenarios ----------
+   A plan is { contractKey: "c" | "eN" }: c = cut/release, eN = extend N years.
+   It lives only in the URL: #/team/<fid>/plan/<key>.<move>,<key>.<move> */
+const planKey = (c) => `${c.draft_year}-${norm(c.player).replace(/ /g, "-")}`;
+
+function parsePlan(str) {
+  const plan = {};
+  for (const part of (str || "").split(",")) {
+    const m = part.match(/^(.+)\.(c|e\d+)$/);
+    if (m) plan[decodeURIComponent(m[1])] = m[2];
+  }
+  return plan;
+}
+const planString = (plan) => Object.entries(plan).map(([k, v]) => `${encodeURIComponent(k)}.${v}`).join(",");
+
+function applyPlan(fid, plan) {
+  const cur = CUR();
+  return D.contracts.map((c) => {
+    const mv = c.franchise === fid && c.status === "active" ? plan[planKey(c)] : null;
+    if (!mv) return c;
+    if (mv === "c") return { ...c, status: "released", dead_from: c.years ? cur : null };
+    return { ...c, years: Math.max(1, parseInt(mv.slice(1), 10) || 1) };
+  });
+}
+
 // Everything that determines a franchise's cap for season/draft year y.
-function teamYear(fid, y) {
-  const mine = D.contracts.filter((c) => c.franchise === fid);
+function teamYear(fid, y, cs = D.contracts) {
+  const mine = cs.filter((c) => c.franchise === fid);
   const keepers = mine
     .filter((c) => c.status === "active" && c.draft_year <= y && y <= lastYear(c))
     .map((c) => ({ c, cost: costIn(c, y), st: statusIn(c, y) }))
@@ -276,32 +302,76 @@ function pageTeams() {
     <div class="teams">${tiles}</div>`;
 }
 
-function pageTeam(fid) {
+function pageTeam(fid, mode, planStr) {
   const f = D.byId[fid];
   if (!f) { app.innerHTML = `<h1>Team not found</h1><p><a href="#/teams">See all teams</a></p>`; return; }
+  const planning = mode === "plan";
+  const plan = planning ? parsePlan(planStr) : {};
+  const cs = planning ? applyPlan(fid, plan) : D.contracts;
   const cur = CUR(), next = cur + 1;
   const sum0 = franchiseSummary(fid);
-  const now = teamYear(fid, cur);
-  const nx = teamYear(fid, next);
+  const now = teamYear(fid, cur, cs), base = teamYear(fid, cur);
+  const nx = teamYear(fid, next, cs), nxBase = teamYear(fid, next);
   const { players, missing } = currentRoster(fid);
   const espn = D.rosters?.source === "espn";
   const rec = espn ? D.rosters.records?.[fid] : null;
+  const nMoves = Object.keys(plan).length;
+  const was = (a, b) => (planning && a !== b ? `<small class="was">was ${money(b)}</small>` : "");
 
-  const rosterRows = players.map(({ p, c, cost, st }) => `<tr>
-    ${espn ? `<td class="dim">${esc(p.slot || "")}</td>` : ""}
-    <td>${esc(c?.player || p.name)}${p.injury && p.injury !== "ACTIVE" ? ` <span class="neg" title="${esc(p.injury)}">${esc(p.injury[0])}</span>` : ""}</td>
+  // One planner control per roster row, depending on the player's status now.
+  function control(c, st) {
+    if (!c) return `<span class="dim">Leaves after ${cur}</span>`;
+    const k = planKey(c), mv = plan[k] || "";
+    const id = `mv-${k}`;
+    if (st.key === "c") {
+      return `<select id="${id}" data-k="${esc(k)}" aria-label="Move for ${esc(c.player)}">
+        <option value="">Keep</option><option value="c" ${mv === "c" ? "selected" : ""}>Cut</option></select>`;
+    }
+    if (st.key === "b") {
+      const yrs = mv.startsWith("e") ? mv.slice(1) : "";
+      return `<select id="${id}" data-k="${esc(k)}" aria-label="Move for ${esc(c.player)}">
+          <option value="">Decide later</option>
+          <option value="e" ${yrs ? "selected" : ""}>Extend</option>
+          <option value="c" ${mv === "c" ? "selected" : ""}>Release</option></select>
+        ${yrs ? `<input type="number" id="yr-${k}" data-k="${esc(k)}" min="1" step="1" value="${yrs}" aria-label="Contract years for ${esc(c.player)}"> yr` : ""}`;
+    }
+    return `<select id="${id}" data-k="${esc(k)}" aria-label="Move for ${esc(c.player)}">
+      <option value="">Keep</option><option value="c" ${mv === "c" ? "selected" : ""}>Release</option></select>`;
+  }
+
+  function effect(c) {
+    const mv = c && plan[planKey(c)];
+    if (!mv) return "";
+    if (mv === "c") {
+      if (!c.years) return `<span class="dim">Free</span>`;
+      return `<span class="neg">Dead ${money(deadPerYear(c))}/yr, ${cur}–${lastYear(c)}</span>`;
+    }
+    const x = { ...c, years: parseInt(mv.slice(1), 10) || 1 };
+    return `${money(annualCost(x))}/yr, ${next}–${lastYear(x)}`;
+  }
+
+  const planned = new Map(cs.filter((c) => c.franchise === fid).map((c) => [planKey(c), c]));
+  const rosterRows = players.map(({ p, c, cost, st }) => {
+    const mv = c && plan[planKey(c)];
+    const pc = c ? planned.get(planKey(c)) || c : null;
+    return `<tr class="${mv === "c" ? "cut" : ""}">
+    ${espn && !planning ? `<td class="dim">${esc(p.slot || "")}</td>` : ""}
+    <td class="pl">${esc(c?.player || p.name)}${p.injury && p.injury !== "ACTIVE" ? ` <span class="neg" title="${esc(p.injury)}">${esc(p.injury[0])}</span>` : ""}</td>
     <td>${esc(p.pos || c?.pos || "")}</td>
     ${espn ? `<td class="dim">${esc(p.nfl || "")}</td>` : ""}
     <td>${chip(st)}</td>
+    ${planning ? `<td class="move">${control(c, st)}</td><td>${effect(c)}</td>` : `
     <td class="num">${c ? c.draft_year : ""}</td>
     <td class="num">${c ? money(c.price) : ""}</td>
-    <td class="num">${c?.years ? `${c.years} yr` : ""}</td>
-    <td class="num">${money(cost)}</td>
-    <td class="num">${c ? lastYear(c) : ""}</td></tr>`).join("");
+    <td class="num">${c?.years ? `${c.years} yr` : ""}</td>`}
+    <td class="num">${money(mv === "c" ? 0 : cost)}</td>
+    <td class="num">${pc ? lastYear(pc) : ""}</td></tr>`;
+  }).join("");
+  const preCols = (espn && !planning ? 1 : 0) + 3 + (espn ? 1 : 0) + (planning ? 2 : 3);
 
-  const futureYears = [next, next + 1, next + 2, next + 3];
-  const deadRows = D.contracts.filter((c) => c.franchise === fid && c.status === "released" && c.years && c.dead_from && lastYear(c) >= next)
-    .map((c) => `<tr><td>${esc(c.player)}</td><td class="num">${money(annualCost(c))}</td><td class="num neg">${money(deadPerYear(c))}</td><td class="num">${c.dead_from}–${lastYear(c)}</td></tr>`).join("");
+  const futureYears = [cur, next, next + 1, next + 2, next + 3];
+  const deadRows = cs.filter((c) => c.franchise === fid && c.status === "released" && c.years && c.dead_from && lastYear(c) >= cur)
+    .map((c) => `<tr><td>${esc(c.player)}${planning && plan[planKey(c)] ? ` <span class="council">planned</span>` : ""}</td><td class="num">${money(annualCost(c))}</td><td class="num neg">${money(deadPerYear(c))}</td><td class="num">${c.dead_from}–${lastYear(c)}</td></tr>`).join("");
   const tradeRows = D.trades.filter((t) => (t.from === fid || t.to === fid) && t.draft_year >= next)
     .sort((a, b) => a.draft_year - b.draft_year)
     .map((t) => {
@@ -320,30 +390,50 @@ function pageTeam(fid) {
   const ev = D.events.filter((e) => e.franchise === fid || e.to_franchise === fid).slice(-12).reverse()
     .map((e) => `<tr><td class="num">${esc(e.date)}</td><td>${esc(e.type)}</td><td>${esc(e.player)}</td><td class="dim">${esc(e.detail)}</td></tr>`).join("");
 
+  const projRows = futureYears.map((y) => {
+    const t = teamYear(fid, y, cs), b = teamYear(fid, y);
+    const d = t.budget - b.budget;
+    return `<tr><td class="num">${y === cur ? `${y} season` : y}</td><td class="num">${t.keepers.length}</td><td class="num">${money(t.committed)}</td>
+      <td class="num ${t.deadSum ? "neg" : ""}">${money(t.deadSum)}</td><td class="num">${signed(t.net)}</td>
+      <td class="num ${t.budget < 0 ? "neg" : ""}"><b>${money(t.budget)}</b></td>
+      ${planning ? `<td class="num ${d < 0 ? "neg" : d > 0 ? "pos" : "dim"}">${d ? signed(d) : "none"}</td>` : ""}</tr>`;
+  }).join("");
+
+  const scrollY = window.scrollY;
   app.innerHTML = `
+    ${planning ? `<div class="plan-bar" role="region" aria-label="Planning mode">
+      <div><b>Planning mode.</b> A scenario only. Nothing here changes the league. ${nMoves ? `${nMoves} planned ${nMoves === 1 ? "move" : "moves"}.` : "Pick moves in the roster below."}</div>
+      <div class="plan-actions">
+        <button type="button" id="copy-link" ${nMoves ? "" : "disabled"}>Copy link to this plan</button>
+        <button type="button" id="reset-plan" ${nMoves ? "" : "disabled"}>Reset</button>
+        <a href="#/team/${fid}">Exit planning</a>
+      </div></div>` : ""}
     <div class="team-head"><div>
       <h1>${esc(f.team_name)}</h1>
       <div class="ow">${esc(f.owners)}${f.council ? `<span class="council">Jedi High Council</span>` : ""}</div>
-    </div></div>
+    </div>
+    ${planning ? "" : `<a class="plan-btn" href="#/team/${fid}/plan">Plan moves</a>`}</div>
     <div class="stats">
       ${rec ? `<div class="stat"><b>${record(rec.wins, rec.losses, rec.ties)}</b><span>${cur} record</span></div>` : ""}
-      <div class="stat"><b>${record(sum0.w, sum0.l, sum0.t)}</b><span>All-time record</span></div>
-      <div class="stat"><b>${sum0.titles}</b><span>Titles</span></div>
-      <div class="stat"><b>${money(now.committed)}</b><span>${cur} salary</span></div>
-      <div class="stat"><b class="${nx.budget < 0 ? "neg" : ""}">${money(nx.budget)}</b><span>${next} draft budget</span></div>
+      ${planning ? "" : `<div class="stat"><b>${record(sum0.w, sum0.l, sum0.t)}</b><span>All-time record</span></div>
+      <div class="stat"><b>${sum0.titles}</b><span>Titles</span></div>`}
+      <div class="stat"><b>${money(now.committed + now.deadSum)}</b><span>${cur} salary${now.deadSum ? " + dead money" : ""}</span>${was(now.committed + now.deadSum, base.committed + base.deadSum)}</div>
+      <div class="stat"><b class="${nx.budget < 0 ? "neg" : ""}">${money(nx.budget)}</b><span>${next} draft budget</span>${was(nx.budget, nxBase.budget)}</div>
     </div>
 
     <section aria-labelledby="h-roster">
       <h2 id="h-roster">${cur} roster</h2>
+      ${planning ? `<p class="note">Cut a contract and his dead money counts from the ${cur} season through his last contract year. Releasing a rookie is free. Extensions start at the ${next} draft and can be any length.</p>` : ""}
       <div class="legend">${chip({ key: "c", label: "Contract" })}${chip({ key: "b", label: "Year B" })}${chip({ key: "a", label: "Year A" })}${chip({ key: "fa", label: "Free agent ($0)" })}</div>
-      <div class="table-wrap"><table>
-        <thead><tr>${espn ? "<th>Slot</th>" : ""}<th>Player</th><th>Pos</th>${espn ? "<th>NFL</th>" : ""}<th>Status</th>
-        <th class="num">Drafted</th><th class="num">Price</th><th class="num">Contract</th><th class="num">Cost</th><th class="num">Expires</th></tr></thead>
-        <tbody>${rosterRows || `<tr><td colspan="10" class="dim">No roster yet.</td></tr>`}
-        <tr class="total"><td colspan="${espn ? 8 : 6}">${players.length} of ${D.cfg.roster_limit} roster spots</td><td class="num">${money(now.committed)}</td><td></td></tr></tbody>
+      <div class="table-wrap"><table class="${planning ? "planning" : ""}">
+        <thead><tr>${espn && !planning ? "<th>Slot</th>" : ""}<th>Player</th><th>Pos</th>${espn ? "<th>NFL</th>" : ""}<th>Status</th>
+        ${planning ? "<th>Move</th><th>Effect</th>" : `<th class="num">Drafted</th><th class="num">Price</th><th class="num">Contract</th>`}
+        <th class="num">${cur} cost</th><th class="num">Expires</th></tr></thead>
+        <tbody>${rosterRows || `<tr><td colspan="11" class="dim">No roster yet.</td></tr>`}
+        <tr class="total"><td colspan="${preCols}">${players.length} of ${D.cfg.roster_limit} roster spots</td><td class="num">${money(now.committed)}</td><td></td></tr></tbody>
       </table></div>
       ${missing.length ? `<div class="warn">Under contract here but not on the roster: ${missing.map((c) => esc(c.player)).join(", ")}. Check for a trade or drop.</div>` : ""}
-      <p class="note">Rosters ${espn ? `synced from ESPN ${esc(D.rosters.updated?.slice(0, 10))}` : `from the spreadsheet of ${esc(D.rosters?.updated || "")}`}. Cost is ${D.cfg.extension_step === 5 ? "the draft price plus $5 for each contract year after the first" : "the draft price plus the extension step"}.</p>
+      ${planning ? "" : `<p class="note">Rosters ${espn ? `synced from ESPN ${esc(D.rosters.updated?.slice(0, 10))}` : `from the spreadsheet of ${esc(D.rosters?.updated || "")}`}. Cost is the draft price plus $${STEP()} for each contract year after the first.</p>`}
     </section>
 
     <section aria-labelledby="h-next">
@@ -351,39 +441,67 @@ function pageTeam(fid) {
       <div class="table-wrap"><table>
         <tbody>
           <tr><td>Salary cap</td><td class="num">${money(D.cfg.salary_cap)}</td></tr>
-          <tr><td>Players already kept (${nx.keepers.length})</td><td class="num">${money(-nx.committed)}</td></tr>
+          <tr><td>Players kept (${nx.keepers.length})</td><td class="num">${money(-nx.committed)}</td></tr>
           <tr><td>Dead money</td><td class="num ${nx.deadSum ? "neg" : ""}">${money(-nx.deadSum)}</td></tr>
           <tr><td>Traded cap</td><td class="num ${nx.net < 0 ? "neg" : nx.net > 0 ? "pos" : ""}">${signed(nx.net)}</td></tr>
-          <tr class="total"><td>Draft budget before extensions</td><td class="num ${nx.budget < 0 ? "neg" : ""}">${money(nx.budget)}</td></tr>
+          <tr class="total"><td>Draft budget${nx.pending.length ? ` (${nx.pending.length} Year B ${nx.pending.length === 1 ? "player" : "players"} undecided)` : ""}</td><td class="num ${nx.budget < 0 ? "neg" : ""}">${money(nx.budget)}${was(nx.budget, nxBase.budget)}</td></tr>
         </tbody></table></div>
-      ${nx.pending.length ? `
+      ${nx.pending.length && !planning ? `
         <h3 style="margin-top:1.5rem">Extend or release before the ${next} draft</h3>
-        <p class="note">These players finish Year B in ${cur}. Annual cost by contract length:</p>
+        <p class="note">These players finish Year B in ${cur}. Annual cost by contract length. Use <a href="#/team/${fid}/plan">Plan moves</a> to try any length.</p>
         <div class="table-wrap"><table>
           <thead><tr><th>Player</th><th>Pos</th><th class="num">Price</th><th class="num">1 yr</th><th class="num">2 yr</th><th class="num">3 yr</th><th class="num">4 yr</th></tr></thead>
           <tbody>${pendingRows}</tbody></table></div>` : ""}
     </section>
 
+    <section aria-labelledby="h-proj"><h2 id="h-proj">Future drafts</h2>
+      <p class="note">${planning ? "Budgets with your planned moves. Change shows the difference from the real numbers." : "Budgets from contracts already signed. Extensions and new rookies will lower them."}</p>
+      <div class="table-wrap"><table><thead><tr><th class="num">Draft</th><th class="num">Players kept</th><th class="num">Salary</th><th class="num">Dead money</th><th class="num">Traded cap</th><th class="num">${"Budget"}</th>${planning ? `<th class="num">Change</th>` : ""}</tr></thead>
+      <tbody>${projRows}</tbody></table></div>
+      <p class="note">The ${cur} season row is cap space for this season. The cap is only enforced at drafts.</p>
+    </section>
+
     ${deadRows ? `<section aria-labelledby="h-dead"><h2 id="h-dead">Dead money</h2>
-      <div class="table-wrap"><table><thead><tr><th>Player</th><th class="num">Contract cost</th><th class="num">Owed per draft</th><th class="num">Drafts</th></tr></thead>
+      <div class="table-wrap"><table><thead><tr><th>Player</th><th class="num">Contract cost</th><th class="num">Owed per year</th><th class="num">Seasons</th></tr></thead>
       <tbody>${deadRows}</tbody></table></div></section>` : ""}
 
     ${tradeRows ? `<section aria-labelledby="h-trade"><h2 id="h-trade">Traded cap</h2>
       <div class="table-wrap"><table><thead><tr><th class="num">Draft</th><th>With</th><th class="num">Amount</th></tr></thead>
       <tbody>${tradeRows}</tbody></table></div></section>` : ""}
 
-    <section aria-labelledby="h-proj"><h2 id="h-proj">Future drafts</h2>
-      <p class="note">Budgets from contracts already signed. Extensions and new rookies will lower them.</p>
-      <div class="table-wrap"><table><thead><tr><th class="num">Draft</th><th class="num">Players kept</th><th class="num">Salary</th><th class="num">Dead money</th><th class="num">Traded cap</th><th class="num">Budget</th></tr></thead>
-      <tbody>${futureYears.map((y) => { const t = teamYear(fid, y); return `<tr><td class="num">${y}</td><td class="num">${t.keepers.length}</td><td class="num">${money(t.committed)}</td><td class="num ${t.deadSum ? "neg" : ""}">${money(t.deadSum)}</td><td class="num">${signed(t.net)}</td><td class="num">${money(t.budget)}</td></tr>`; }).join("")}</tbody></table></div>
-    </section>
-
-    ${ev ? `<section aria-labelledby="h-ev"><h2 id="h-ev">Recent changes</h2>
+    ${ev && !planning ? `<section aria-labelledby="h-ev"><h2 id="h-ev">Recent changes</h2>
       <div class="table-wrap"><table><thead><tr><th class="num">Date</th><th>Change</th><th>Player</th><th>Detail</th></tr></thead><tbody>${ev}</tbody></table></div></section>` : ""}
 
-    <section aria-labelledby="h-hist"><h2 id="h-hist">Franchise history</h2>
+    ${planning ? "" : `<section aria-labelledby="h-hist"><h2 id="h-hist">Franchise history</h2>
       <div class="table-wrap"><table><thead><tr><th class="num">Season</th><th>Team name</th><th>Owners</th><th class="num">Finish</th><th class="num">Record</th></tr></thead>
-      <tbody>${hist}</tbody></table></div></section>`;
+      <tbody>${hist}</tbody></table></div></section>`}`;
+
+  if (!planning) return;
+  window.scrollTo(0, scrollY);
+
+  const update = (next, focusId) => {
+    const str = planString(next);
+    history.replaceState(null, "", `#/team/${fid}/plan${str ? `/${str}` : ""}`);
+    pageTeam(fid, "plan", str);
+    if (focusId) document.getElementById(focusId)?.focus();
+  };
+  app.querySelectorAll("select[data-k]").forEach((el) => el.addEventListener("change", () => {
+    const p = { ...plan }, k = el.dataset.k;
+    if (el.value === "") delete p[k];
+    else if (el.value === "e") p[k] = "e1";
+    else p[k] = el.value;
+    update(p, el.value === "e" ? `yr-${k}` : el.id);
+  }));
+  app.querySelectorAll("input[data-k]").forEach((el) => el.addEventListener("change", () => {
+    const n = Math.max(1, parseInt(el.value, 10) || 1);
+    update({ ...plan, [el.dataset.k]: `e${n}` }, el.id);
+  }));
+  document.getElementById("reset-plan")?.addEventListener("click", () => update({}));
+  document.getElementById("copy-link")?.addEventListener("click", async (e) => {
+    const btn = e.currentTarget;
+    try { await navigator.clipboard.writeText(location.href); btn.textContent = "Link copied"; }
+    catch { prompt("Copy this link:", location.href); }
+  });
 }
 
 function pageCap(yParam) {
@@ -468,23 +586,24 @@ function pageRules() {
     <p>Contracts move with the player unchanged. Cap money can be traded for a specific future draft. It only counts at that draft.</p>
 
     <h2>Releases and dead money</h2>
-    <p>Releasing a player on his rookie deal is free. Releasing a player under an extension costs half his annual cost, rounded down, at every draft through the end of the original contract.</p>
-    <div class="formula">dead money = ⌊cost ÷ 2⌋ per draft</div>
+    <p>Releasing a player on his rookie deal is free. Cutting a player under an extension costs half his annual cost, rounded down, every season from the season he is cut through the end of the original contract. It matters at each of those drafts.</p>
+    <div class="formula">dead money = ⌊cost ÷ 2⌋ per season</div>
+    <p>Every team page has a <b>Plan moves</b> button for trying extensions and cuts before you make them.</p>
   </div>`;
 }
 
 /* ================= Router ================= */
 
 function route() {
-  const [, page = "", arg] = location.hash.replace(/^#/, "").split("/");
+  const [, page = "", arg, mode, planStr] = location.hash.replace(/^#/, "").split("/");
   const nav = page === "team" ? "teams" : page || "history";
   document.querySelectorAll("[data-nav]").forEach((a) => (a.dataset.nav === nav ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
   if (page === "teams") pageTeams();
-  else if (page === "team") pageTeam(arg);
+  else if (page === "team") pageTeam(arg, mode, planStr);
   else if (page === "cap") pageCap(arg);
   else if (page === "rules") pageRules();
   else pageHistory();
-  const title = { teams: "Teams", team: D.byId[arg]?.team_name, cap: "Salary cap", rules: "Rules" }[page];
+  const title = { teams: "Teams", team: D.byId[arg] && `${D.byId[arg].team_name}${mode === "plan" ? " plan" : ""}`, cap: "Salary cap", rules: "Rules" }[page];
   document.title = title ? `${title} | The Dynasty Awakens` : "The Dynasty Awakens";
   window.scrollTo(0, 0);
 }
