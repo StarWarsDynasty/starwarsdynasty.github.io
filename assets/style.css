@@ -85,7 +85,21 @@ section { margin-top: 3rem; }
 .hero { padding: 1rem 0 0; }
 .hero h1 { color: var(--text); }
 .hero .lede { margin-top: .75rem; font-size: 1.0625rem; }
-.hero .crawl { color: var(--steel); font-size: 1.125rem; line-height: 1.45; margin: 1rem 0 .75rem; }
+.hero .crawl { color: var(--steel); font-size: 1.125rem; line-height: 1.45; margin: 2rem 0 0; text-align: center; }
+
+/* Yearly opening crawl: yellow, justified, square block */
+.opening {
+  --crawl: #F3D34A;
+  max-width: 34rem; margin: 2rem auto 2.25rem; color: var(--crawl);
+  text-align: justify; hyphens: auto; -webkit-hyphens: auto;
+  font-size: 1.1875rem; line-height: 1.6;
+}
+.opening-title {
+  text-align: center; font-family: var(--display); font-weight: 700;
+  font-size: 1.5rem; letter-spacing: .06em; margin-bottom: 1.25rem; color: var(--crawl);
+}
+.opening p { margin: 0 0 1.1rem; }
+@media (max-width: 640px) { .opening { font-size: 1.0625rem; text-align: left; } }
 
 /* ---------- Roll of champions ---------- */
 .roll { list-style: none; margin: 1.5rem 0 0; padding: 0; position: relative; }

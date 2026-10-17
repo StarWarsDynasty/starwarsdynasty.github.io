@@ -15,6 +15,7 @@ All in `data/`. Edit them in the GitHub web editor (open the file, click the pen
 | `seasons.csv` | Final place and record for each franchise each season | After the season ends |
 | `franchises.csv` | Owners (team names come from ESPN nightly) | Owner changes |
 | `config.json` | Current season, cap, extension step | Once a year |
+| `crawl.txt` | Yellow opening text on the landing page. First line is the title, blank lines separate paragraphs. | Once a year, for fun |
 
 ### contracts.csv
 

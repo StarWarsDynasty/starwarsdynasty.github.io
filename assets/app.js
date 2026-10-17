@@ -34,6 +34,7 @@ async function load(path, kind, optional = false) {
   try {
     const res = await fetch(path, { cache: "no-cache" });
     if (!res.ok) throw new Error(`${path}: ${res.status}`);
+    if (kind === "text") return res.text();
     return kind === "json" ? res.json() : parseCSV(await res.text());
   } catch (e) {
     if (optional) return null;
@@ -44,7 +45,7 @@ async function load(path, kind, optional = false) {
 const D = {};
 
 async function loadAll() {
-  const [cfg, franchises, seasons, contracts, trades, events, rosters, report] = await Promise.all([
+  const [cfg, franchises, seasons, contracts, trades, events, rosters, report, crawl] = await Promise.all([
     load("data/config.json", "json"),
     load("data/franchises.csv", "csv"),
     load("data/seasons.csv", "csv"),
@@ -53,8 +54,9 @@ async function loadAll() {
     load("data/events.csv", "csv", true),
     load("data/espn/rosters.json", "json", true),
     load("data/espn/report.json", "json", true),
+    load("data/crawl.txt", "text", true),
   ]);
-  Object.assign(D, { cfg, franchises, seasons, trades, events: events || [], rosters, report });
+  Object.assign(D, { cfg, franchises, seasons, trades, events: events || [], rosters, report, crawl: crawl || "" });
   D.contracts = contracts.map((c) => ({
     ...c,
     draft_year: +c.draft_year,
@@ -204,6 +206,18 @@ function sortable(table) {
 
 /* ================= Pages ================= */
 
+// Yearly opening text from data/crawl.txt: first line is the title,
+// blank lines separate paragraphs.
+function openingCrawl() {
+  const blocks = D.crawl.replace(/\r/g, "").trim().split(/\n\s*\n/).map((b) => b.trim()).filter(Boolean);
+  if (!blocks.length) return "";
+  const [title, ...paras] = blocks;
+  return `<div class="opening">
+    <h2 class="opening-title">${esc(title)}</h2>
+    ${paras.map((p) => `<p>${esc(p)}</p>`).join("")}
+  </div>`;
+}
+
 function pageHistory() {
   const years = [...new Set(D.seasons.map((s) => s.season))].sort((a, b) => b - a);
   const done = years.length;
@@ -257,8 +271,8 @@ function pageHistory() {
   app.innerHTML = `
     <div class="hero">
       <h1>${esc(D.cfg.league_name)}</h1>
-      <p class="crawl">A long time ago<br>in a dynasty league<br>far, far away…</p>
-      <p class="lede">Twelve franchises have battled for ${CUR() - D.cfg.first_season + 1} seasons.</p>
+      <p class="crawl">A long time ago in a dynasty league far,<br> far away…</p>
+      ${openingCrawl()}
     </div>
     <section aria-labelledby="h-roll">
       <h2 id="h-roll">Supreme Chancellors</h2>
