@@ -303,7 +303,7 @@ function pageHistory() {
     </section>
     <section aria-labelledby="h-rec">
       <h2 id="h-rec">Franchise records</h2>
-      <p class="note">Records belong to the franchise, not the owner. Completed seasons only. Titles, Top 3, Jar Jars, and Best leave out ${(() => { const ys = [...new Set(D.seasons.filter((s) => s.mark === "*").map((s) => s.season))].sort(); return ys.length ? ys.join(" and ") : "no seasons"; })()}, when contracts were not in effect. Select a column to sort.</p>
+      <p class="note">Records belong to the franchise, not the owner. Completed seasons only. Select a column to sort.</p>
       <div class="table-wrap"><table id="rec">
         <thead><tr><th class="sortable">Franchise</th><th class="sortable">Owners</th>
         <th class="num sortable">W</th><th class="num sortable">L</th><th class="num sortable">T</th>
