@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-10-17T22:52:19+00:00",
+ "updated": "2026-10-18T11:43:18+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -200,7 +200,7 @@
     "name": "Will Reichard",
     "pos": "K",
     "nfl": "MIN",
-    "slot": "K",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1791445012150
@@ -210,7 +210,7 @@
     "name": "Matt Gay",
     "pos": "K",
     "nfl": "LV",
-    "slot": "Bench",
+    "slot": "K",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792049467726
@@ -444,7 +444,7 @@
     "name": "Colston Loveland",
     "pos": "TE",
     "nfl": "CHI",
-    "slot": "TE",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -630,14 +630,14 @@
     "acq_date": 1791656699590
    },
    {
-    "espn_id": "4360698",
-    "name": "Joe Milton III",
-    "pos": "QB",
-    "nfl": "PHI",
-    "slot": "Bench",
+    "espn_id": "2573401",
+    "name": "Tyler Higbee",
+    "pos": "TE",
+    "nfl": "LAR",
+    "slot": "TE",
     "injury": "ACTIVE",
     "acq_type": "ADD",
-    "acq_date": 1792259365490
+    "acq_date": 1792289758885
    }
   ],
   "k_mcmillan": [
@@ -1008,20 +1008,10 @@
     "name": "Dameon Pierce",
     "pos": "RB",
     "nfl": "PHI",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792049467726
-   },
-   {
-    "espn_id": "5081397",
-    "name": "Dylan Sampson",
-    "pos": "RB",
-    "nfl": "CLE",
-    "slot": "Bench",
-    "injury": "INJURY_RESERVE",
-    "acq_type": "ADD",
-    "acq_date": 1792049467728
    },
    {
     "espn_id": "5081432",
@@ -1058,10 +1048,20 @@
     "name": "Jeremiyah Love",
     "pos": "RB",
     "nfl": "ARI",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "OUT",
     "acq_type": "TRADE",
     "acq_date": 1792097765653
+   },
+   {
+    "espn_id": "3917232",
+    "name": "Tyler Bass",
+    "pos": "K",
+    "nfl": "BUF",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792292379736
    }
   ],
   "turowsky": [
@@ -1372,7 +1372,7 @@
     "name": "Keaton Mitchell",
     "pos": "RB",
     "nfl": "LAC",
-    "slot": "FLEX",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1392,7 +1392,7 @@
     "name": "Kyle Monangai",
     "pos": "RB",
     "nfl": "CHI",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1478,14 +1478,14 @@
     "acq_date": 1791445012149
    },
    {
-    "espn_id": "2973405",
-    "name": "Kalif Raymond",
+    "espn_id": "5083754",
+    "name": "Ryan Flournoy",
     "pos": "WR",
-    "nfl": "CHI",
-    "slot": "Bench",
+    "nfl": "DAL",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "ADD",
-    "acq_date": 1791723910134
+    "acq_date": 1792291763491
    }
   ],
   "talaric_patch": [
