@@ -176,16 +176,19 @@ function currentRoster(fid) {
   return { players, missing };
 }
 
+// W-L-T counts every season. Titles, top 3, Jar Jars, and best finish skip
+// seasons marked "*" (2015-16, before contracts were in effect).
 function franchiseSummary(fid) {
   const ss = D.seasons.filter((s) => s.franchise === fid);
   const w = sum(ss.map((s) => s.wins)), l = sum(ss.map((s) => s.losses)), t = sum(ss.map((s) => s.ties));
+  const counted = ss.filter((s) => s.mark !== "*");
   return {
     seasons: ss.length, w, l, t,
     pct: (w + t / 2) / Math.max(1, w + l + t),
-    titles: ss.filter((s) => s.place === 1).length,
-    podiums: ss.filter((s) => s.place <= 3).length,
-    jarjars: ss.filter((s) => s.place === 12).length,
-    best: Math.min(...ss.map((s) => s.place)),
+    titles: counted.filter((s) => s.place === 1).length,
+    podiums: counted.filter((s) => s.place <= 3).length,
+    jarjars: counted.filter((s) => s.place === 12).length,
+    best: counted.length ? Math.min(...counted.map((s) => s.place)) : null,
   };
 }
 
@@ -284,7 +287,7 @@ function pageHistory() {
       <td class="num" data-v="${r.titles}">${r.titles || "<span class='dim'>0</span>"}</td>
       <td class="num" data-v="${r.podiums}">${r.podiums}</td>
       <td class="num" data-v="${r.jarjars}">${r.jarjars}</td>
-      <td class="num" data-v="${r.best}">${ord(r.best)}</td></tr>`;
+      <td class="num" data-v="${r.best ?? 99}">${r.best ? ord(r.best) : "<span class='dim'>none</span>"}</td></tr>`;
   }).join("");
 
   app.innerHTML = `
@@ -300,7 +303,7 @@ function pageHistory() {
     </section>
     <section aria-labelledby="h-rec">
       <h2 id="h-rec">Franchise records</h2>
-      <p class="note">Records belong to the franchise, not the owner. Completed seasons only. Select a column to sort.</p>
+      <p class="note">Records belong to the franchise, not the owner. Completed seasons only. Titles, Top 3, Jar Jars, and Best leave out ${(() => { const ys = [...new Set(D.seasons.filter((s) => s.mark === "*").map((s) => s.season))].sort(); return ys.length ? ys.join(" and ") : "no seasons"; })()}, when contracts were not in effect. Select a column to sort.</p>
       <div class="table-wrap"><table id="rec">
         <thead><tr><th class="sortable">Franchise</th><th class="sortable">Owners</th>
         <th class="num sortable">W</th><th class="num sortable">L</th><th class="num sortable">T</th>
