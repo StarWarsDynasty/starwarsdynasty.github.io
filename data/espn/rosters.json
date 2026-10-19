@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-10-18T11:43:18+00:00",
+ "updated": "2026-10-19T11:53:24+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -313,7 +313,7 @@
     "pos": "RB",
     "nfl": "PIT",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -373,7 +373,7 @@
     "pos": "RB",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -575,7 +575,7 @@
     "pos": "WR",
     "nfl": "NE",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "TRADE",
     "acq_date": 1787942567665
    },
@@ -737,7 +737,7 @@
     "pos": "QB",
     "nfl": "CHI",
     "slot": "SFLEX",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -767,7 +767,7 @@
     "pos": "WR",
     "nfl": "LAC",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -868,8 +868,8 @@
     "name": "Tyler Warren",
     "pos": "TE",
     "nfl": "IND",
-    "slot": "TE",
-    "injury": "QUESTIONABLE",
+    "slot": "Bench",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -919,16 +919,6 @@
     "pos": "QB",
     "nfl": "HOU",
     "slot": "SFLEX",
-    "injury": "ACTIVE",
-    "acq_type": "DRAFT",
-    "acq_date": 1787886221994
-   },
-   {
-    "espn_id": "4832846",
-    "name": "Demond Claiborne",
-    "pos": "RB",
-    "nfl": "MIN",
-    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1062,6 +1052,16 @@
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792292379736
+   },
+   {
+    "espn_id": "2576925",
+    "name": "Darren Waller",
+    "pos": "TE",
+    "nfl": "CAR",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792337862877
    }
   ],
   "turowsky": [
@@ -1383,7 +1383,7 @@
     "pos": "TE",
     "nfl": "NYJ",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1403,7 +1403,7 @@
     "pos": "QB",
     "nfl": "PIT",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1515,7 +1515,7 @@
     "pos": "RB",
     "nfl": "NE",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1545,7 +1545,7 @@
     "pos": "RB",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1635,7 +1635,7 @@
     "pos": "QB",
     "nfl": "LAR",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1837,7 +1837,7 @@
     "pos": "RB",
     "nfl": "NO",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1847,7 +1847,7 @@
     "pos": "WR",
     "nfl": "BAL",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2009,7 +2009,7 @@
     "pos": "WR",
     "nfl": "NYJ",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2019,7 +2019,7 @@
     "pos": "WR",
     "nfl": "BAL",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2089,7 +2089,7 @@
     "pos": "WR",
     "nfl": "NE",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "TRADE",
     "acq_date": 1792087623769
    },
@@ -2109,7 +2109,7 @@
     "pos": "K",
     "nfl": "LAR",
     "slot": "K",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "ADD",
     "acq_date": 1792087655161
    },
@@ -2201,7 +2201,7 @@
     "pos": "TE",
     "nfl": "BUF",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2251,7 +2251,7 @@
     "pos": "WR",
     "nfl": "BUF",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2343,7 +2343,7 @@
     "pos": "RB",
     "nfl": "CLE",
     "slot": "SFLEX",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2383,7 +2383,7 @@
     "pos": "WR",
     "nfl": "NO",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2503,7 +2503,7 @@
     "pos": "QB",
     "nfl": "ARI",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
