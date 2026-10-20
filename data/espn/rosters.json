@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-10-19T11:53:24+00:00",
+ "updated": "2026-10-20T11:50:36+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -10,7 +10,7 @@
     "name": "Cam Skattebo",
     "pos": "RB",
     "nfl": "NYG",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -80,7 +80,7 @@
     "name": "Saquon Barkley",
     "pos": "RB",
     "nfl": "PHI",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -100,7 +100,7 @@
     "name": "Jacoby Brissett",
     "pos": "QB",
     "nfl": "ARI",
-    "slot": "QB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -130,7 +130,7 @@
     "name": "Jaylen Warren",
     "pos": "RB",
     "nfl": "PIT",
-    "slot": "FLEX",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -160,7 +160,7 @@
     "name": "J.J. McCarthy",
     "pos": "QB",
     "nfl": "NYG",
-    "slot": "Bench",
+    "slot": "QB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -180,7 +180,7 @@
     "name": "James Cook III",
     "pos": "RB",
     "nfl": "BUF",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "TRADE",
     "acq_date": 1790061510065
@@ -190,7 +190,7 @@
     "name": "Jameson Williams",
     "pos": "WR",
     "nfl": "DET",
-    "slot": "Bench",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "TRADE",
     "acq_date": 1791444187029
@@ -373,7 +373,7 @@
     "pos": "RB",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -444,7 +444,7 @@
     "name": "Colston Loveland",
     "pos": "TE",
     "nfl": "CHI",
-    "slot": "Bench",
+    "slot": "TE",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -454,7 +454,7 @@
     "name": "Jakobi Meyers",
     "pos": "WR",
     "nfl": "JAX",
-    "slot": "WR",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -464,7 +464,7 @@
     "name": "Blake Corum",
     "pos": "RB",
     "nfl": "LAR",
-    "slot": "Bench",
+    "slot": "SFLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -534,7 +534,7 @@
     "name": "Rams D/ST",
     "pos": "D/ST",
     "nfl": "LAR",
-    "slot": "D/ST",
+    "slot": "Bench",
     "injury": "",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -554,7 +554,7 @@
     "name": "Jameis Winston",
     "pos": "QB",
     "nfl": "NYG",
-    "slot": "SFLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -575,7 +575,7 @@
     "pos": "WR",
     "nfl": "NE",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "INJURY_RESERVE",
     "acq_type": "TRADE",
     "acq_date": 1787942567665
    },
@@ -585,7 +585,7 @@
     "pos": "RB",
     "nfl": "WSH",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "INJURY_RESERVE",
     "acq_type": "TRADE",
     "acq_date": 1790061510065
    },
@@ -614,7 +614,7 @@
     "name": "Jets D/ST",
     "pos": "D/ST",
     "nfl": "NYJ",
-    "slot": "Bench",
+    "slot": "D/ST",
     "injury": "",
     "acq_type": "ADD",
     "acq_date": 1791458735662
@@ -624,7 +624,7 @@
     "name": "Kendrick Bourne",
     "pos": "WR",
     "nfl": "ARI",
-    "slot": "Bench",
+    "slot": "WR",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1791656699590
@@ -634,7 +634,7 @@
     "name": "Tyler Higbee",
     "pos": "TE",
     "nfl": "LAR",
-    "slot": "TE",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792289758885
@@ -879,7 +879,7 @@
     "pos": "WR",
     "nfl": "WSH",
     "slot": "WR",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1090,7 +1090,7 @@
     "name": "Keenan Allen",
     "pos": "WR",
     "nfl": "IND",
-    "slot": "WR",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1110,7 +1110,7 @@
     "name": "David Montgomery",
     "pos": "RB",
     "nfl": "HOU",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1130,7 +1130,7 @@
     "name": "Zach Charbonnet",
     "pos": "RB",
     "nfl": "SEA",
-    "slot": "Bench",
+    "slot": "SFLEX",
     "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1150,7 +1150,7 @@
     "name": "Trevor Lawrence",
     "pos": "QB",
     "nfl": "JAX",
-    "slot": "QB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1160,7 +1160,7 @@
     "name": "Jordan Addison",
     "pos": "WR",
     "nfl": "MIN",
-    "slot": "Bench",
+    "slot": "WR",
     "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1170,7 +1170,7 @@
     "name": "Sam Darnold",
     "pos": "QB",
     "nfl": "SEA",
-    "slot": "SFLEX",
+    "slot": "QB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1180,7 +1180,7 @@
     "name": "Josh Jacobs",
     "pos": "RB",
     "nfl": "GB",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "DAY_TO_DAY",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1190,7 +1190,7 @@
     "name": "Tyler Allgeier",
     "pos": "RB",
     "nfl": "ARI",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1260,7 +1260,7 @@
     "name": "MarShawn Lloyd",
     "pos": "RB",
     "nfl": "GB",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1403,7 +1403,7 @@
     "pos": "QB",
     "nfl": "PIT",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1635,7 +1635,7 @@
     "pos": "QB",
     "nfl": "LAR",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1787,7 +1787,7 @@
     "pos": "WR",
     "nfl": "LAR",
     "slot": "FLEX",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2089,7 +2089,7 @@
     "pos": "WR",
     "nfl": "NE",
     "slot": "WR",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "TRADE",
     "acq_date": 1792087623769
    },
@@ -2109,7 +2109,7 @@
     "pos": "K",
     "nfl": "LAR",
     "slot": "K",
-    "injury": "QUESTIONABLE",
+    "injury": "INJURY_RESERVE",
     "acq_type": "ADD",
     "acq_date": 1792087655161
    },
@@ -2201,7 +2201,7 @@
     "pos": "TE",
     "nfl": "BUF",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2291,7 +2291,7 @@
     "pos": "WR",
     "nfl": "WSH",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2353,7 +2353,7 @@
     "pos": "WR",
     "nfl": "SF",
     "slot": "FLEX",
-    "injury": "QUESTIONABLE",
+    "injury": "DOUBTFUL",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2503,7 +2503,7 @@
     "pos": "QB",
     "nfl": "ARI",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2552,87 +2552,87 @@
  "records": {
   "renbarger": {
    "team_name": "Dark Helmet",
-   "wins": 3,
+   "wins": 4,
    "losses": 2,
    "ties": 0,
-   "points_for": 595.64
+   "points_for": 723.52
   },
   "andersen": {
    "team_name": "The Trash Compactor",
-   "wins": 3,
+   "wins": 4,
    "losses": 2,
    "ties": 0,
-   "points_for": 538.3199999999999
+   "points_for": 632.9
   },
   "b_mcmillan": {
    "team_name": "Padawan McJarJar",
    "wins": 1,
-   "losses": 4,
+   "losses": 5,
    "ties": 0,
-   "points_for": 516.6800000000001
+   "points_for": 594.96
   },
   "k_mcmillan": {
    "team_name": "Jeanty Fett",
-   "wins": 3,
+   "wins": 4,
    "losses": 2,
    "ties": 0,
-   "points_for": 630.02
+   "points_for": 737.8
   },
   "tusa_chen": {
    "team_name": "Wookies of the Year",
    "wins": 1,
-   "losses": 4,
+   "losses": 5,
    "ties": 0,
-   "points_for": 537.8
+   "points_for": 631.78
   },
   "turowsky": {
    "team_name": "Salacious B Crumb",
    "wins": 2,
-   "losses": 3,
+   "losses": 4,
    "ties": 0,
-   "points_for": 602.22
+   "points_for": 715.6800000000001
   },
   "armijo_pendleton": {
    "team_name": "Denver Dewbacks",
-   "wins": 2,
+   "wins": 3,
    "losses": 3,
    "ties": 0,
-   "points_for": 567.5600000000001
+   "points_for": 653.9000000000001
   },
   "talaric_patch": {
    "team_name": "Manorwood Moffs",
-   "wins": 3,
+   "wins": 4,
    "losses": 2,
    "ties": 0,
-   "points_for": 670.5400000000001
+   "points_for": 790.8600000000001
   },
   "turner": {
    "team_name": "Revenge of the Swift",
    "wins": 3,
-   "losses": 2,
+   "losses": 3,
    "ties": 0,
-   "points_for": 593.8
+   "points_for": 692.76
   },
   "bubernak": {
    "team_name": "The McCaffalorian",
    "wins": 1,
-   "losses": 4,
+   "losses": 5,
    "ties": 0,
-   "points_for": 626.88
+   "points_for": 726.48
   },
   "stone": {
    "team_name": "Angry Ewoks",
-   "wins": 5,
+   "wins": 6,
    "losses": 0,
    "ties": 0,
-   "points_for": 792.34
+   "points_for": 917.12
   },
   "sands": {
    "team_name": "Qui-gon Judkins",
    "wins": 3,
-   "losses": 2,
+   "losses": 3,
    "ties": 0,
-   "points_for": 625.16
+   "points_for": 707.9
   }
  }
 }
