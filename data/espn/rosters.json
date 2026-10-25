@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-10-24T11:48:12+00:00",
+ "updated": "2026-10-25T11:46:46+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -938,8 +938,8 @@
     "name": "Dontayvion Wicks",
     "pos": "WR",
     "nfl": "PHI",
-    "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "slot": "Bench",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -988,7 +988,7 @@
     "name": "KC Concepcion",
     "pos": "WR",
     "nfl": "CLE",
-    "slot": "FLEX",
+    "slot": "WR",
     "injury": "ACTIVE",
     "acq_type": "TRADE",
     "acq_date": 1792087623769
@@ -998,7 +998,7 @@
     "name": "Makai Lemon",
     "pos": "WR",
     "nfl": "PHI",
-    "slot": "Bench",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "TRADE",
     "acq_date": 1792087623769
@@ -1019,7 +1019,7 @@
     "pos": "RB",
     "nfl": "CLE",
     "slot": "Bench",
-    "injury": "INJURY_RESERVE",
+    "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792681982889
    },
@@ -1039,29 +1039,29 @@
     "pos": "WR",
     "nfl": "SF",
     "slot": "Bench",
-    "injury": "INJURY_RESERVE",
+    "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792682014847
    },
    {
-    "espn_id": "3055899",
-    "name": "Harrison Butker",
+    "espn_id": "2985659",
+    "name": "Wil Lutz",
     "pos": "K",
-    "nfl": "KC",
+    "nfl": "DEN",
     "slot": "K",
     "injury": "ACTIVE",
     "acq_type": "ADD",
-    "acq_date": 1792682028744
+    "acq_date": 1792876995254
    },
    {
-    "espn_id": "3117256",
-    "name": "Dalton Schultz",
+    "espn_id": "2573401",
+    "name": "Tyler Higbee",
     "pos": "TE",
-    "nfl": "HOU",
+    "nfl": "LAR",
     "slot": "TE",
     "injury": "ACTIVE",
     "acq_type": "ADD",
-    "acq_date": 1792682922197
+    "acq_date": 1792901832473
    }
   ],
   "turowsky": [
@@ -1271,7 +1271,7 @@
     "pos": "RB",
     "nfl": "DEN",
     "slot": "Bench",
-    "injury": "INJURY_RESERVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    }
@@ -1494,7 +1494,7 @@
     "name": "Brian Robinson Jr.",
     "pos": "RB",
     "nfl": "ATL",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1660,16 +1660,6 @@
     "acq_date": 1790839422061
    },
    {
-    "espn_id": "4682745",
-    "name": "Jaylen Wright",
-    "pos": "RB",
-    "nfl": "MIA",
-    "slot": "Bench",
-    "injury": "ACTIVE",
-    "acq_type": "ADD",
-    "acq_date": 1790956338167
-   },
-   {
     "espn_id": "2971573",
     "name": "Ka'imi Fairbairn",
     "pos": "K",
@@ -1698,6 +1688,16 @@
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792717110290
+   },
+   {
+    "espn_id": "4427728",
+    "name": "Bam Knight",
+    "pos": "RB",
+    "nfl": "ARI",
+    "slot": "RB",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792852040086
    }
   ],
   "turner": [
@@ -1746,8 +1746,8 @@
     "name": "Lamar Jackson",
     "pos": "QB",
     "nfl": "BAL",
-    "slot": "QB",
-    "injury": "QUESTIONABLE",
+    "slot": "Bench",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1776,8 +1776,8 @@
     "name": "DeVonta Smith",
     "pos": "WR",
     "nfl": "PHI",
-    "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "slot": "Bench",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1806,7 +1806,7 @@
     "name": "Michael Wilson",
     "pos": "WR",
     "nfl": "ARI",
-    "slot": "FLEX",
+    "slot": "WR",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1876,7 +1876,7 @@
     "name": "Tre Tucker",
     "pos": "WR",
     "nfl": "LV",
-    "slot": "Bench",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1790236057195
@@ -1886,7 +1886,7 @@
     "name": "Tyler Huntley",
     "pos": "QB",
     "nfl": "BAL",
-    "slot": "Bench",
+    "slot": "QB",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1791445012148
@@ -2069,7 +2069,7 @@
     "pos": "TE",
     "nfl": "PHI",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1791484842264
    },
@@ -2130,7 +2130,7 @@
     "name": "Puka Nacua",
     "pos": "WR",
     "nfl": "LAR",
-    "slot": "WR",
+    "slot": "Bench",
     "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -2320,7 +2320,7 @@
     "name": "Malik Washington",
     "pos": "WR",
     "nfl": "MIA",
-    "slot": "Bench",
+    "slot": "WR",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1790896286611
@@ -2473,7 +2473,7 @@
     "pos": "RB",
     "nfl": "MIN",
     "slot": "Bench",
-    "injury": "INJURY_RESERVE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
