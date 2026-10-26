@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-10-25T11:46:46+00:00",
+ "updated": "2026-10-26T13:36:05+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -11,7 +11,7 @@
     "pos": "RB",
     "nfl": "NYG",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -201,7 +201,7 @@
     "pos": "WR",
     "nfl": "HOU",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "ADD",
     "acq_date": 1792653678141
    },
@@ -313,7 +313,7 @@
     "pos": "RB",
     "nfl": "PIT",
     "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -373,7 +373,7 @@
     "pos": "RB",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -635,7 +635,7 @@
     "pos": "RB",
     "nfl": "NYG",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "ADD",
     "acq_date": 1792677271903
    }
@@ -879,7 +879,7 @@
     "pos": "WR",
     "nfl": "DEN",
     "slot": "WR",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1226,16 +1226,6 @@
     "acq_date": 1787886221994
    },
    {
-    "espn_id": "4686361",
-    "name": "Cam Little",
-    "pos": "K",
-    "nfl": "JAX",
-    "slot": "K",
-    "injury": "ACTIVE",
-    "acq_type": "DRAFT",
-    "acq_date": 1787886221994
-   },
-   {
     "espn_id": "-16016",
     "name": "Vikings D/ST",
     "pos": "D/ST",
@@ -1271,9 +1261,19 @@
     "pos": "RB",
     "nfl": "DEN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
+   },
+   {
+    "espn_id": "5082424",
+    "name": "Dominic Zvada",
+    "pos": "K",
+    "nfl": "NYG",
+    "slot": "K",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1792929958815
    }
   ],
   "armijo_pendleton": [
@@ -1403,7 +1403,7 @@
     "pos": "QB",
     "nfl": "PIT",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1505,7 +1505,7 @@
     "pos": "WR",
     "nfl": "SEA",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1545,7 +1545,7 @@
     "pos": "RB",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1635,7 +1635,7 @@
     "pos": "QB",
     "nfl": "LAR",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1706,8 +1706,8 @@
     "name": "Breece Hall",
     "pos": "RB",
     "nfl": "NYJ",
-    "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "slot": "Bench",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1727,7 +1727,7 @@
     "pos": "QB",
     "nfl": "TB",
     "slot": "SFLEX",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1836,7 +1836,7 @@
     "name": "Alvin Kamara",
     "pos": "RB",
     "nfl": "NO",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1968,7 +1968,7 @@
     "name": "Kyle Pitts Sr.",
     "pos": "TE",
     "nfl": "ATL",
-    "slot": "TE",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -2068,7 +2068,7 @@
     "name": "Dallas Goedert",
     "pos": "TE",
     "nfl": "PHI",
-    "slot": "Bench",
+    "slot": "TE",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1791484842264
@@ -2130,8 +2130,8 @@
     "name": "Puka Nacua",
     "pos": "WR",
     "nfl": "LAR",
-    "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "slot": "WR",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2320,7 +2320,7 @@
     "name": "Malik Washington",
     "pos": "WR",
     "nfl": "MIA",
-    "slot": "WR",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1790896286611
@@ -2423,7 +2423,7 @@
     "pos": "RB",
     "nfl": "MIN",
     "slot": "RB",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2493,7 +2493,7 @@
     "pos": "WR",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2503,7 +2503,7 @@
     "pos": "QB",
     "nfl": "ARI",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2513,7 +2513,7 @@
     "pos": "RB",
     "nfl": "LV",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2543,7 +2543,7 @@
     "pos": "QB",
     "nfl": "SEA",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "ADD",
     "acq_date": 1789629296944
    }
