@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-01T11:50:35+00:00",
+ "updated": "2026-11-02T12:08:02+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -51,7 +51,7 @@
     "pos": "TE",
     "nfl": "NE",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -455,7 +455,7 @@
     "pos": "WR",
     "nfl": "JAX",
     "slot": "SFLEX",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -879,7 +879,7 @@
     "pos": "WR",
     "nfl": "DEN",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -949,7 +949,7 @@
     "pos": "WR",
     "nfl": "ATL",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1009,7 +1009,7 @@
     "pos": "RB",
     "nfl": "ARI",
     "slot": "RB",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "TRADE",
     "acq_date": 1792097765653
    },
@@ -1403,7 +1403,7 @@
     "pos": "QB",
     "nfl": "PIT",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1443,7 +1443,7 @@
     "pos": "QB",
     "nfl": "MIN",
     "slot": "SFLEX",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "TRADE",
     "acq_date": 1787942567665
    },
@@ -1472,7 +1472,7 @@
     "name": "Samaje Perine",
     "pos": "RB",
     "nfl": "CIN",
-    "slot": "FLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792721529792
@@ -1482,7 +1482,7 @@
     "name": "Travis Hunter",
     "pos": "WR",
     "nfl": "JAX",
-    "slot": "Bench",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1793288209324
@@ -1625,7 +1625,7 @@
     "pos": "QB",
     "nfl": "LAR",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1665,7 +1665,7 @@
     "pos": "RB",
     "nfl": "ARI",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "ADD",
     "acq_date": 1792852040086
    },
@@ -1706,8 +1706,8 @@
     "name": "Breece Hall",
     "pos": "RB",
     "nfl": "NYJ",
-    "slot": "FLEX",
-    "injury": "QUESTIONABLE",
+    "slot": "Bench",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1747,7 +1747,7 @@
     "pos": "QB",
     "nfl": "BAL",
     "slot": "QB",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1807,7 +1807,7 @@
     "pos": "WR",
     "nfl": "ARI",
     "slot": "WR",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1876,7 +1876,7 @@
     "name": "Tre Tucker",
     "pos": "WR",
     "nfl": "LV",
-    "slot": "Bench",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1790236057195
@@ -1887,7 +1887,7 @@
     "pos": "QB",
     "nfl": "BAL",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "ADD",
     "acq_date": 1791445012148
    },
@@ -2141,7 +2141,7 @@
     "pos": "WR",
     "nfl": "DAL",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2201,7 +2201,7 @@
     "pos": "TE",
     "nfl": "BUF",
     "slot": "TE",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2463,7 +2463,7 @@
     "pos": "RB",
     "nfl": "TB",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2493,7 +2493,7 @@
     "pos": "WR",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2503,7 +2503,7 @@
     "pos": "QB",
     "nfl": "ARI",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2523,7 +2523,7 @@
     "pos": "TE",
     "nfl": "DAL",
     "slot": "TE",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
