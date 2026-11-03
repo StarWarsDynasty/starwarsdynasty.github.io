@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-02T12:08:02+00:00",
+ "updated": "2026-11-03T12:01:51+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -262,8 +262,8 @@
     "name": "Jadarian Price",
     "pos": "RB",
     "nfl": "SEA",
-    "slot": "Bench",
-    "injury": "INJURY_RESERVE",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -412,7 +412,7 @@
     "name": "Emanuel Wilson",
     "pos": "RB",
     "nfl": "SEA",
-    "slot": "FLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1790236057195
@@ -455,7 +455,7 @@
     "pos": "WR",
     "nfl": "JAX",
     "slot": "SFLEX",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -657,7 +657,7 @@
     "pos": "QB",
     "nfl": "LAR",
     "slot": "QB",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -949,7 +949,7 @@
     "pos": "WR",
     "nfl": "ATL",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1403,7 +1403,7 @@
     "pos": "QB",
     "nfl": "PIT",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1625,7 +1625,7 @@
     "pos": "QB",
     "nfl": "LAR",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1737,7 +1737,7 @@
     "pos": "RB",
     "nfl": "JAX",
     "slot": "RB",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -2393,7 +2393,7 @@
     "pos": "RB",
     "nfl": "JAX",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2503,7 +2503,7 @@
     "pos": "QB",
     "nfl": "ARI",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2543,7 +2543,7 @@
     "pos": "QB",
     "nfl": "SEA",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "ADD",
     "acq_date": 1789629296944
    }
@@ -2553,86 +2553,86 @@
   "renbarger": {
    "team_name": "Dark Helmet",
    "wins": 5,
-   "losses": 2,
+   "losses": 3,
    "ties": 0,
-   "points_for": 867.52
+   "points_for": 992.72
   },
   "andersen": {
    "team_name": "The Trash Compactor",
    "wins": 4,
-   "losses": 3,
+   "losses": 4,
    "ties": 0,
-   "points_for": 709.48
+   "points_for": 772.0600000000001
   },
   "b_mcmillan": {
    "team_name": "Padawan McJarJar",
-   "wins": 2,
+   "wins": 3,
    "losses": 5,
    "ties": 0,
-   "points_for": 711.9000000000001
+   "points_for": 819.6600000000001
   },
   "k_mcmillan": {
    "team_name": "Jeanty Fett",
    "wins": 5,
-   "losses": 2,
+   "losses": 3,
    "ties": 0,
-   "points_for": 868.3199999999999
+   "points_for": 992.3799999999999
   },
   "tusa_chen": {
    "team_name": "Wookies of the Year",
    "wins": 1,
-   "losses": 6,
+   "losses": 7,
    "ties": 0,
-   "points_for": 737.74
+   "points_for": 839.48
   },
   "turowsky": {
    "team_name": "Salacious B Crumb",
-   "wins": 3,
+   "wins": 4,
    "losses": 4,
    "ties": 0,
-   "points_for": 827.3600000000001
+   "points_for": 986.7800000000001
   },
   "armijo_pendleton": {
    "team_name": "Denver Dewbacks",
-   "wins": 3,
+   "wins": 4,
    "losses": 4,
    "ties": 0,
-   "points_for": 753.9800000000001
+   "points_for": 877.5600000000002
   },
   "talaric_patch": {
    "team_name": "Manorwood Moffs",
    "wins": 4,
-   "losses": 3,
+   "losses": 4,
    "ties": 0,
-   "points_for": 880.2800000000001
+   "points_for": 981.4800000000001
   },
   "turner": {
    "team_name": "Revenge of the Swift",
-   "wins": 3,
+   "wins": 4,
    "losses": 4,
    "ties": 0,
-   "points_for": 806.14
+   "points_for": 919.24
   },
   "bubernak": {
    "team_name": "The McCaffalorian",
    "wins": 2,
-   "losses": 5,
+   "losses": 6,
    "ties": 0,
-   "points_for": 837.4200000000001
+   "points_for": 945.5600000000001
   },
   "stone": {
    "team_name": "Angry Ewoks",
-   "wins": 6,
+   "wins": 7,
    "losses": 1,
    "ties": 0,
-   "points_for": 1036.86
+   "points_for": 1177.08
   },
   "sands": {
    "team_name": "Qui-gon Judkins",
-   "wins": 4,
+   "wins": 5,
    "losses": 3,
    "ties": 0,
-   "points_for": 829.24
+   "points_for": 977.44
   }
  }
 }
