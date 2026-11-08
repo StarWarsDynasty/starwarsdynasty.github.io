@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-07T11:54:27+00:00",
+ "updated": "2026-11-08T11:54:39+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -31,7 +31,7 @@
     "pos": "WR",
     "nfl": "BUF",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -343,7 +343,7 @@
     "pos": "WR",
     "nfl": "NO",
     "slot": "Bench",
-    "injury": "INJURY_RESERVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -590,16 +590,6 @@
     "acq_date": 1790061510065
    },
    {
-    "espn_id": "3116406",
-    "name": "Tyreek Hill",
-    "pos": "WR",
-    "nfl": "FA",
-    "slot": "Bench",
-    "injury": "QUESTIONABLE",
-    "acq_type": "ADD",
-    "acq_date": 1790867065071
-   },
-   {
     "espn_id": "4431299",
     "name": "Rome Odunze",
     "pos": "WR",
@@ -638,6 +628,16 @@
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1793866799325
+   },
+   {
+    "espn_id": "4429084",
+    "name": "Anthony Richardson Sr.",
+    "pos": "QB",
+    "nfl": "IND",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1794084822333
    }
   ],
   "k_mcmillan": [
@@ -967,8 +967,8 @@
     "espn_id": "4599739",
     "name": "Kendre Miller",
     "pos": "RB",
-    "nfl": "NO",
-    "slot": "RB",
+    "nfl": "FA",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1790975037417
@@ -1018,7 +1018,7 @@
     "name": "Dylan Sampson",
     "pos": "RB",
     "nfl": "CLE",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792681982889
@@ -1029,7 +1029,7 @@
     "pos": "WR",
     "nfl": "SF",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "INJURY_RESERVE",
     "acq_type": "ADD",
     "acq_date": 1792682014847
    },
@@ -1130,7 +1130,7 @@
     "name": "Zach Charbonnet",
     "pos": "RB",
     "nfl": "SEA",
-    "slot": "SFLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1141,7 +1141,7 @@
     "pos": "WR",
     "nfl": "DEN",
     "slot": "Bench",
-    "injury": "INJURY_RESERVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1190,7 +1190,7 @@
     "name": "Tyler Allgeier",
     "pos": "RB",
     "nfl": "ARI",
-    "slot": "Bench",
+    "slot": "SFLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1433,7 +1433,7 @@
     "pos": "QB",
     "nfl": "MIN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "TRADE",
     "acq_date": 1787942567665
    },
@@ -1495,7 +1495,7 @@
     "pos": "RB",
     "nfl": "ATL",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "INJURY_RESERVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -2251,7 +2251,7 @@
     "pos": "WR",
     "nfl": "BUF",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2372,7 +2372,7 @@
     "name": "Garrett Wilson",
     "pos": "WR",
     "nfl": "NYJ",
-    "slot": "FLEX",
+    "slot": "Bench",
     "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -2422,7 +2422,7 @@
     "name": "Aaron Jones Sr.",
     "pos": "RB",
     "nfl": "MIN",
-    "slot": "Bench",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -2518,16 +2518,6 @@
     "acq_date": 1787886221994
    },
    {
-    "espn_id": "4242355",
-    "name": "Jake Ferguson",
-    "pos": "TE",
-    "nfl": "DAL",
-    "slot": "TE",
-    "injury": "QUESTIONABLE",
-    "acq_type": "DRAFT",
-    "acq_date": 1787886221994
-   },
-   {
     "espn_id": "17427",
     "name": "Cairo Santos",
     "pos": "K",
@@ -2546,6 +2536,16 @@
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1789629296944
+   },
+   {
+    "espn_id": "4360635",
+    "name": "Chig Okonkwo",
+    "pos": "TE",
+    "nfl": "WSH",
+    "slot": "TE",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1794070647070
    }
   ]
  },
