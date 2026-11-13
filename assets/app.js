@@ -729,6 +729,7 @@ function route() {
   const [, page = "", arg, mode, planStr] = location.hash.replace(/^#/, "").split("/");
   const nav = page === "team" ? "teams" : page || "history";
   document.querySelectorAll("[data-nav]").forEach((a) => (a.dataset.nav === nav ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
+  document.querySelectorAll("#team-menu a").forEach((a) => (page === "team" && a.dataset.fid === arg ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
   if (page === "teams") pageTeams();
   else if (page === "team") pageTeam(arg, mode, planStr);
   else if (page === "cap") pageCap(arg);
@@ -741,6 +742,15 @@ function route() {
 
 loadAll().then(() => {
   foot.innerHTML = `Records kept by the Jedi Chronicler, ${esc(D.cfg.chronicler)}.`;
+  // Teams dropdown in the top bar (opens on hover or keyboard focus; a click on "Teams" still goes to all teams).
+  const menu = document.getElementById("team-menu");
+  if (menu) {
+    menu.innerHTML = [...D.franchises].sort((x, y) => x.team_name.localeCompare(y.team_name))
+      .map((f) => `<a href="#/team/${f.id}" data-fid="${f.id}">${esc(f.team_name)}<small>${esc(f.owners)}</small></a>`).join("");
+    const drop = menu.parentElement;
+    menu.addEventListener("click", () => { drop.classList.add("closed"); document.activeElement?.blur(); });
+    drop.addEventListener("mouseleave", () => drop.classList.remove("closed"));
+  }
   window.addEventListener("hashchange", route);
   route();
 }).catch((e) => {
