@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install requests
+      - run: pip install requests openpyxl
 
       - name: Pull from ESPN
         env:
@@ -35,11 +35,15 @@ jobs:
           ESPN_SWID: ${{ secrets.ESPN_SWID }}
         run: python scripts/fetch_espn.py ${{ inputs.dry_run && '--dry-run' || '' }}
 
+      - name: Build spreadsheet
+        if: ${{ !inputs.dry_run }}
+        run: python scripts/build_workbook.py
+
       - name: Commit changes
         if: ${{ !inputs.dry_run }}
         run: |
           git config user.name "espn-sync"
           git config user.email "actions@users.noreply.github.com"
-          git add data/
+          git add data/ downloads/
           git diff --cached --quiet || git commit -m "ESPN sync $(date -u +%Y-%m-%d)"
           git push
