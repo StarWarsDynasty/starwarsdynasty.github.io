@@ -223,6 +223,8 @@ details.keepers summary { cursor: pointer; color: var(--steel); }
   border: 1px solid var(--gold-dim); background: transparent; color: var(--gold);
   text-decoration: none; cursor: pointer; display: inline-block;
 }
+.head-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.controls .head-actions { margin-left: auto; }
 .plan-btn:hover, .plan-actions button:hover:not(:disabled) { background: rgba(226,178,74,.12); color: var(--gold); }
 .plan-actions button:disabled { opacity: .45; cursor: default; }
 .plan-actions a { border-color: var(--line); color: var(--muted); }

@@ -60,6 +60,14 @@ Add 12 rows after each season. `place` is a number. `mark` is `*` or `**` for th
 
 Releases are only detected by comparing to the previous ESPN snapshot, so the first run never releases anyone.
 
+## League spreadsheet
+
+`scripts/build_workbook.py` writes `downloads/StarWars_DynastyFF.xlsx`: a LeagueInfo summary plus one sheet per team, with live formulas owners can play with. The "Download spreadsheet" buttons on the salary cap and team pages save it as `StarWars_DynastyFF_YYYYMMDD.xlsx`, dated from `downloads/workbook.json`.
+
+The nightly sync runs it after the ESPN pull. It only rebuilds when rosters, contracts, cap trades, or config change. To rebuild by hand: `python scripts/build_workbook.py --force` (needs `openpyxl`).
+
+The cap formulas in the workbook repeat the rules in `assets/app.js`. If a rule changes, change both.
+
 ## Secrets
 
 Settings → Secrets and variables → Actions:

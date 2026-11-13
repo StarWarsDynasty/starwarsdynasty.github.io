@@ -45,7 +45,7 @@ async function load(path, kind, optional = false) {
 const D = {};
 
 async function loadAll() {
-  const [cfg, franchises, seasons, contracts, trades, events, rosters, report, crawl] = await Promise.all([
+  const [cfg, franchises, seasons, contracts, trades, events, rosters, report, crawl, workbook] = await Promise.all([
     load("data/config.json", "json"),
     load("data/franchises.csv", "csv"),
     load("data/seasons.csv", "csv"),
@@ -55,8 +55,9 @@ async function loadAll() {
     load("data/espn/rosters.json", "json", true),
     load("data/espn/report.json", "json", true),
     load("data/crawl.txt", "text", true),
+    load("downloads/workbook.json", "json", true),
   ]);
-  Object.assign(D, { cfg, franchises, seasons, trades, events: events || [], rosters, report, crawl: crawl || "" });
+  Object.assign(D, { cfg, franchises, seasons, trades, events: events || [], rosters, report, crawl: crawl || "", workbook });
   D.contracts = contracts.map((c) => ({
     ...c,
     draft_year: +c.draft_year,
@@ -201,6 +202,10 @@ const signed = (n) => (n > 0 ? `+$${n}` : n < 0 ? `−$${-n}` : "$0");
 const ord = (n) => n + (["th", "st", "nd", "rd"][(n % 100 - 20) % 10] || ["th", "st", "nd", "rd"][n % 100] || "th");
 const teamLink = (fid, label) => `<a href="#/team/${fid}">${esc(label ?? D.byId[fid]?.team_name ?? fid)}</a>`;
 const mark = (m) => (m ? `<span class="mark" title="${esc(D.cfg.marks[m] || "")}">${esc(m)}</span>` : "");
+// League workbook built nightly by scripts/build_workbook.py. Saved with the date it was built.
+const xlsxLink = () => (D.workbook?.built
+  ? `<a class="plan-btn" href="downloads/StarWars_DynastyFF.xlsx?v=${esc(D.workbook.built)}" download="StarWars_DynastyFF_${esc(D.workbook.built)}.xlsx">Download spreadsheet</a>`
+  : "");
 const chip = (st) => `<span class="status s-${st.key}">${esc(st.label)}</span>`;
 const record = (w, l, t) => `${w}–${l}${t ? `–${t}` : ""}`;
 
@@ -449,7 +454,7 @@ function pageTeam(fid, mode, planStr) {
       <h1>${esc(f.team_name)}</h1>
       <div class="ow">${esc(f.owners)}${f.council ? `<span class="council">Jedi High Council</span>` : ""}</div>
     </div>
-    ${planning ? "" : `<a class="plan-btn" href="#/team/${fid}/plan">Plan moves</a>`}</div>
+    ${planning ? "" : `<div class="head-actions">${xlsxLink()}<a class="plan-btn" href="#/team/${fid}/plan">Plan moves</a></div>`}</div>
     <div class="stats">
       ${rec ? `<div class="stat"><b>${record(rec.wins, rec.losses, rec.ties)}</b><span>${cur} record</span></div>` : ""}
       ${planning ? "" : `<div class="stat"><b>${record(sum0.w, sum0.l, sum0.t)}</b><span>All-time record</span></div>
@@ -577,7 +582,7 @@ function pageCap(yParam) {
     <p class="lede">The $${D.cfg.salary_cap} cap is enforced only at the auction draft. Traded cap and dead money count toward the draft year they belong to.</p>
     <div class="controls"><span class="dim">Show</span><div class="seg" role="group" aria-label="Year">
       ${years.map((v) => `<button type="button" data-y="${v}" aria-pressed="${v === y}">${v < UPCOMING() ? `${v} season` : `${v} draft`}</button>`).join("")}
-    </div></div>
+    </div><span class="head-actions">${xlsxLink()}</span></div>
     <div class="table-wrap"><table id="cap">
       <thead><tr><th class="sortable">Team</th><th class="num sortable">Players</th><th class="num sortable">Salary</th>
       <th class="num sortable">Dead money</th><th class="num sortable">Traded cap</th>
