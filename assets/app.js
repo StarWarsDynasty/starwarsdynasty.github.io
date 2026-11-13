@@ -392,24 +392,93 @@ function pageTeam(fid, mode, planStr) {
     return `${money(annualCost(x))}/yr, ${c.draft_year + 2}–${lastYear(x)}`;
   }
 
+  // ---------- Roster as a spreadsheet: lettered columns, numbered rows, formula bar ----------
   const planned = new Map(cs.filter((c) => c.franchise === fid).map((c) => [planKey(c), c]));
-  const rosterRows = players.map(({ p, c, cost, st }) => {
+  const showSlot = espn && !planning;
+  const cols = [
+    ...(showSlot ? [{ h: "Slot", cls: "c slot fz1" }] : []),
+    { h: "Player", cls: "l fz2 pl" }, { h: "Pos", cls: "c" }, ...(espn ? [{ h: "NFL", cls: "c" }] : []),
+    { h: "Status", cls: "l" },
+    ...(planning ? [{ h: "Move", cls: "l move" }, { h: "Effect", cls: "l" }]
+      : [{ h: "Drafted", cls: "c" }, { h: "Year", cls: "c" }, { h: "Contract", cls: "c" }, { h: "Base price", cls: "r" }]),
+    { h: `${cur} cost`, cls: "r" }, { h: "Expires", cls: "c" }, { h: `${next} cost`, cls: "r" },
+  ];
+  const col = Object.fromEntries(cols.map((c, i) => [c.h, i]));
+  const letter = (i) => String.fromCharCode(65 + i);
+  const fxCells = [];
+  const fx = (ref, text) => { fxCells.push({ ref, text }); return ` data-fx="${fxCells.length - 1}" tabindex="0"`; };
+  const costMath = (nm, x, y) => {
+    const n = yearsOn(x, y);
+    if (n <= 2) return `${nm} · ${y} cost = ${money(x.price)} base (${n <= 1 ? "Year A" : "Year B"}, rookie deal)`;
+    return `${nm} · ${y} cost = ${money(x.price)} base + $${STEP()} × (${x.years} − 1) = ${money(annualCost(x))}`;
+  };
+  let fxDefault = null;
+
+  const rosterRows = players.map(({ p, c, cost, st }, i) => {
+    const n = i + 2; // sheet row; row 1 is the header
+    const ref = (h) => `${letter(col[h])}${n}`;
     const mv = c && plan[planKey(c)];
     const pc = c ? planned.get(planKey(c)) || c : null;
-    return `<tr class="${mv === "c" ? "cut" : ""}">
-    ${espn && !planning ? `<td class="dim">${esc(p.slot || "")}</td>` : ""}
-    <td class="pl">${esc(c?.player || p.name)}${p.injury && p.injury !== "ACTIVE" ? ` <span class="neg" title="${esc(p.injury)}">${esc(p.injury[0])}</span>` : ""}</td>
-    <td>${esc(p.pos || c?.pos || "")}</td>
-    ${espn ? `<td class="dim">${esc(p.nfl || "")}</td>` : ""}
-    <td>${chip(st)}</td>
-    ${planning ? `<td class="move">${control(c, st)}</td><td>${effect(c)}</td>` : `
-    <td class="num">${c ? c.draft_year : ""}</td>
-    <td class="num">${c ? money(c.price) : ""}</td>
-    <td class="num">${c?.years ? `${c.years} yr` : ""}</td>`}
-    <td class="num">${st.key === "d" && !mv ? `<span class="dim">TBD</span>` : money(mv === "c" ? 0 : (mv ? costIn(pc, cur) : cost))}</td>
-    <td class="num">${pc && !(st.key === "d" && !mv) ? lastYear(pc) : ""}</td></tr>`;
+    const nm = esc(c?.player || p.name);
+    const pending = st.key === "d" && !mv;
+    const inj = p.injury && p.injury !== "ACTIVE" ? ` <span class="inj" title="${esc(p.injury)}">${esc(p.injury[0])}</span>` : "";
+
+    let curTxt, curFx, nextTxt, nextFx;
+    if (!c) {
+      curTxt = st.key === "fa" ? "$0" : ""; curFx = `${nm} · ${esc(st.label.toLowerCase())}, $0`;
+      nextTxt = ""; nextFx = `${nm} · not under contract, not kept`;
+    } else if (mv === "c") {
+      curTxt = "$0";
+      curFx = c.years ? `${nm} · cut: dead money ⌊${money(annualCost(c))} ÷ 2⌋ = ${money(deadPerYear(c))}/yr, ${cur}–${lastYear(c)}`
+        : `${nm} · released from rookie deal: $0, no dead money`;
+      nextTxt = "$0"; nextFx = curFx;
+    } else {
+      curTxt = pending ? "TBD" : money(mv ? costIn(pc, cur) : cost);
+      curFx = pending ? `${nm} · rookie deal ended: extend or release before the ${next} draft` : costMath(nm, pc, cur);
+      if (!pc.years && next === pc.draft_year + 2) {
+        nextTxt = "TBD";
+        nextFx = `${nm} · Year B: extend to set the ${next} cost. ${[1, 2, 3, 4].map((j) => `${j} yr ${money(pc.price + STEP() * (j - 1))}`).join(", ")}`;
+      } else if (pc.draft_year <= next && next <= lastYear(pc)) {
+        nextTxt = money(costIn(pc, next)); nextFx = costMath(nm, pc, next);
+      } else {
+        nextTxt = "–"; nextFx = `${nm} · contract ends after ${lastYear(pc)}, returns to the draft pool`;
+      }
+    }
+    const yr = c ? yearsOn(c, cur) : "";
+    const exp = pc && !pending ? lastYear(pc) : "";
+    const v = {
+      Slot: esc(p.slot || ""),
+      Player: `${nm}${inj}`,
+      Pos: esc(p.pos || c?.pos || ""),
+      NFL: esc(p.nfl || ""),
+      Status: `<span class="sd sd-${st.key}"></span>${esc(st.label)}`,
+      Move: control(c, st),
+      Effect: effect(c),
+      Drafted: c ? c.draft_year : "",
+      Year: yr,
+      Contract: c?.years ? `${c.years} yr` : "",
+      "Base price": c ? money(c.price) : "",
+      [`${cur} cost`]: curTxt,
+      Expires: exp,
+      [`${next} cost`]: nextTxt,
+    };
+    const curAttr = fx(ref(`${cur} cost`), curFx);
+    // The bar opens on the first contract player's current cost.
+    if (!fxDefault && c && st.key === "c" && !mv) fxDefault = { ...fxCells[fxCells.length - 1], idx: fxCells.length - 1 };
+    const attrs = {
+      [`${cur} cost`]: curAttr,
+      [`${next} cost`]: fx(ref(`${next} cost`), nextFx),
+      Year: !planning && c ? fx(ref("Year"), `${nm} · year = ${cur} − ${c.draft_year} + 1 = ${yr}`) : "",
+      Expires: exp ? fx(ref("Expires"), pc.years ? `${nm} · expires = ${pc.draft_year} drafted + 1 + ${pc.years} yr = ${exp}` : `${nm} · rookie deal: ${pc.draft_year} drafted + 1 = ${exp}`) : "",
+    };
+    return `<tr class="row-${st.key}${mv === "c" ? " cut" : ""}"><td class="rn fz0">${n}</td>${cols.map((k) =>
+      `<td class="${k.cls}"${attrs[k.h] || ""}>${v[k.h] ?? ""}</td>`).join("")}</tr>`;
   }).join("");
-  const preCols = (espn && !planning ? 1 : 0) + 3 + (espn ? 1 : 0) + (planning ? 2 : 3);
+  if (!fxDefault && fxCells.length) fxDefault = { ...fxCells[0], idx: 0 };
+  const lead = col[`${cur} cost`] - (showSlot ? 1 : 0);
+  const totalRow = `<tr class="total"><td class="rn fz0">${players.length + 2}</td>${showSlot ? `<td class="fz1"></td>` : ""}
+    <td class="l fz2">${players.length} of ${D.cfg.roster_limit} spots</td><td colspan="${lead - 1}"></td>
+    <td class="r">${money(now.committed)}</td><td></td><td class="r">${money(nx.committed)}</td></tr>`;
 
   const futureYears = [...new Set([cur, next, next + 1, next + 2, next + 3])];
   const deadRows = cs.filter((c) => c.franchise === fid && c.status === "released" && c.years && c.dead_from && lastYear(c) >= cur)
@@ -466,16 +535,21 @@ function pageTeam(fid, mode, planStr) {
     <section aria-labelledby="h-roster">
       <h2 id="h-roster">${cur} roster</h2>
       ${planning ? `<p class="note">Cut a contract and his dead money counts from the ${cur} season through his last contract year. Releasing a rookie is free. Extensions start at the ${next} draft and can be any length.</p>` : ""}
-      <div class="legend">${chip({ key: "c", label: "Contract" })}${chip({ key: "b", label: "Year B" })}${chip({ key: "a", label: "Year A" })}${chip({ key: "fa", label: "Free agent ($0)" })}</div>
-      <div class="table-wrap"><table class="${planning ? "planning" : ""}">
-        <thead><tr>${espn && !planning ? "<th>Slot</th>" : ""}<th>Player</th><th>Pos</th>${espn ? "<th>NFL</th>" : ""}<th>Status</th>
-        ${planning ? "<th>Move</th><th>Effect</th>" : `<th class="num">Drafted</th><th class="num">Price</th><th class="num">Contract</th>`}
-        <th class="num">${cur} cost</th><th class="num">Expires</th></tr></thead>
-        <tbody>${rosterRows || `<tr><td colspan="11" class="dim">No roster yet.</td></tr>`}
-        <tr class="total"><td colspan="${preCols}">${players.length} of ${D.cfg.roster_limit} roster spots</td><td class="num">${money(now.committed)}</td><td></td></tr></tbody>
-      </table></div>
+      <div class="legend">${chip({ key: "c", label: "Contract" })}${chip({ key: "b", label: "Year B" })}${chip({ key: "a", label: "Year A" })}${chip({ key: "fa", label: "Free agent ($0)" })}
+        ${espn ? `<span class="inj-key">Injury: <b>Q</b> questionable · <b>D</b> doubtful · <b>O</b> out · <b>I</b> injured reserve</span>` : ""}</div>
+      <div class="sheet">
+        <div class="fx" aria-live="polite"><span class="fx-ref" id="fx-ref">${fxDefault ? fxDefault.ref : ""}</span><span class="fx-f" aria-hidden="true">fx</span><span class="fx-body" id="fx-body">${fxDefault ? fxDefault.text : ""}</span></div>
+        <div class="sheet-scroll"><table class="xl${planning ? " planning" : ""}${showSlot ? " has-slot" : ""}">
+          <thead>
+            <tr class="colhead"><th class="rn fz0"></th>${cols.map((k, i) => `<th class="${k.cls.split(" ").filter((x) => x.startsWith("fz")).join(" ")}">${letter(i)}</th>`).join("")}</tr>
+            <tr class="fieldhead"><th class="rn fz0">1</th>${cols.map((k) => `<th class="${k.cls}">${k.h}</th>`).join("")}</tr>
+          </thead>
+          <tbody>${rosterRows || `<tr><td class="rn fz0">2</td><td colspan="${cols.length}" class="l">No roster yet.</td></tr>`}
+          ${totalRow}</tbody>
+        </table></div>
+      </div>
       ${missing.length ? `<div class="warn">Under contract here but not on the roster: ${missing.map((c) => esc(c.player)).join(", ")}. Check for a trade or drop.</div>` : ""}
-      ${planning ? "" : `<p class="note">Rosters ${espn ? `synced from ESPN ${esc(D.rosters.updated?.slice(0, 10))}` : `from the spreadsheet of ${esc(D.rosters?.updated || "")}`}. Cost is the draft price plus $${STEP()} for each contract year after the first.</p>`}
+      <p class="note">${planning ? "" : `Rosters ${espn ? `synced from ESPN ${esc(D.rosters.updated?.slice(0, 10))}` : `from the spreadsheet of ${esc(D.rosters?.updated || "")}`}. `}Click a cost, year, or expires cell to see the math. Cost is the draft price plus $${STEP()} for each contract year after the first.</p>
     </section>
 
     <section aria-labelledby="h-next">
@@ -517,6 +591,21 @@ function pageTeam(fid, mode, planStr) {
     ${planning ? "" : `<section aria-labelledby="h-hist"><h2 id="h-hist">Franchise history</h2>
       <div class="table-wrap"><table><thead><tr><th class="num">Season</th><th>Team name</th><th>Owners</th><th class="num">Finish</th><th class="num">Record</th></tr></thead>
       <tbody>${hist}</tbody></table></div></section>`}`;
+
+  // Formula bar: show the math for whichever cell was clicked or focused.
+  const sheet = app.querySelector(".xl");
+  const showFx = (td) => {
+    const f = fxCells[+td.dataset.fx];
+    if (!f) return;
+    sheet.querySelectorAll("td.sel").forEach((x) => x.classList.remove("sel"));
+    td.classList.add("sel");
+    document.getElementById("fx-ref").textContent = f.ref;
+    document.getElementById("fx-body").innerHTML = f.text;
+  };
+  const pick = (e) => { const td = e.target.closest("td[data-fx]"); if (td) showFx(td); };
+  sheet?.addEventListener("click", pick);
+  sheet?.addEventListener("focusin", pick);
+  if (fxDefault) sheet?.querySelector(`td[data-fx="${fxDefault.idx}"]`)?.classList.add("sel");
 
   if (!planning) return;
   window.scrollTo(0, scrollY);

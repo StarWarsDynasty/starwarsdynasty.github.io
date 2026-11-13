@@ -79,7 +79,7 @@ main { padding: 32px var(--gutter) 64px; max-width: 1180px; margin: 0 auto; outl
 section { margin-top: 3rem; }
 .lede { color: var(--muted); max-width: 62ch; }
 .note { color: var(--muted); font-size: .875rem; }
-.table-wrap + .note, .table-wrap + .warn { margin-top: .6rem; }
+.table-wrap + .note, .table-wrap + .warn, .sheet + .note, .sheet + .warn { margin-top: .6rem; }
 
 /* ---------- History hero ---------- */
 .hero { padding: 1rem 0 0; }
@@ -245,4 +245,49 @@ table.planning select, table.planning input {
 table.planning input { width: 4.2rem; margin-left: .35rem; }
 table.planning select:focus-visible, table.planning input:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
 tr.cut td.pl { text-decoration: line-through; color: var(--muted); }
+
+/* ---------- Roster sheet: a light spreadsheet inside the dark page ---------- */
+.legend .inj-key { margin-left: auto; color: var(--muted); font-size: .8125rem; }
+.legend .inj-key b { color: #F28B82; font-weight: 600; }
+.sheet { background: #fff; color: #1B1F33; border-radius: 6px; overflow: hidden; }
+.fx { display: flex; font-size: .8125rem; border-bottom: 1px solid #D3D7E3; min-height: 2rem; }
+.fx > span { padding: .35rem .6rem; border-right: 1px solid #D3D7E3; }
+.fx-ref { flex: none; width: 3.5rem; color: #5A6180; font-weight: 600; }
+.fx-f { flex: none; color: #5A6180; font-style: italic; }
+.fx-body { flex: 1; min-width: 0; border-right: 0 !important; }
+.sheet-scroll { overflow-x: auto; }
+table.xl { border-collapse: separate; border-spacing: 0; font-size: .875rem; font-variant-numeric: tabular-nums; color: #1B1F33; }
+.xl th, .xl td {
+  box-sizing: border-box; padding: .3rem .55rem; background: #fff; color: inherit;
+  border: 0; border-right: 1px solid #D3D7E3; border-bottom: 1px solid #D3D7E3;
+}
+.xl .colhead th { background: #EDEFF5; color: #5A6180; font-weight: 500; font-size: .6875rem; text-align: center; padding: .05rem .4rem; }
+.xl .fieldhead th { background: #151D42; color: var(--gold); font-size: .8125rem; text-align: center; }
+.xl .rn { background: #EDEFF5 !important; color: #5A6180 !important; font-size: .6875rem; font-weight: 500; text-align: center; width: 2rem; min-width: 2rem; padding: 0; }
+.xl .l, .xl .fieldhead th.l { text-align: left; } .xl .c { text-align: center; } .xl .r { text-align: right; }
+.xl td.slot { color: #4D546F; }
+.xl .row-c td { background: #DAE6F7; }
+.xl .row-b td { background: #F7EFC4; }
+.xl .row-a td { background: #DCEFE0; }
+.xl .row-d td { background: #FADBD3; }
+.xl .row-fa td { background: #EEF0F5; color: #4D546F; }
+.xl tr.total td { background: #fff; font-weight: 600; border-top: 2px solid #151D42; }
+.xl tr.cut td.pl { text-decoration: line-through; color: #6B7290; }
+.xl .sd { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: .4rem; vertical-align: 1px; }
+.sd-c { background: #4F7FC4; } .sd-b { background: #B89A1E; } .sd-a { background: #3F9459; }
+.sd-d { background: #C7492E; } .sd-fa { background: #8D93AE; }
+.xl .inj { color: #B3261E; font-weight: 600; font-size: .75rem; }
+.xl td[data-fx] { cursor: pointer; }
+.xl td.sel, .xl td[data-fx]:focus-visible { outline: 2px solid #1F7A4D; outline-offset: -2px; font-weight: 600; }
+/* Frozen panes: row numbers, slot and player stay put when the sheet scrolls sideways */
+.xl .fz0, .xl .fz1, .xl .fz2 { position: sticky; z-index: 1; }
+.xl th.fz0, .xl th.fz1, .xl th.fz2 { z-index: 2; }
+.xl .fz0 { left: 0; }
+.xl .fz1 { left: 2rem; width: 4.25rem; min-width: 4.25rem; max-width: 4.25rem; }
+.xl .fz2 { left: 2rem; box-shadow: 1px 0 0 #B8BED0; }
+.xl.has-slot .fz2 { left: 6.25rem; }
+.xl.planning select, .xl.planning input { color: #1B1F33; background: #fff; border: 1px solid #B8BED0; }
+.xl.planning .dim { color: #5A6180; }
+.xl .neg { color: #B3261E; } .xl .pos { color: #1E6B43; }
+.xl .was { color: #6B7290; }
 @media (max-width: 640px) { .plan-bar { position: static; } }
