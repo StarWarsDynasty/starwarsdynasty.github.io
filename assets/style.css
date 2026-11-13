@@ -68,6 +68,7 @@ p { margin: 0 0 1rem; }
 .topbar nav a:hover { color: var(--text); }
 .topbar nav a[aria-current="page"] { color: var(--text); border-bottom-color: var(--gold); }
 .nav-drop { position: relative; }
+.nav-drop > a { display: block; }
 .drop {
   display: none; position: absolute; top: 100%; left: -.9rem; z-index: 10; min-width: 15rem;
   padding: .4rem 0; margin-top: 2px; background: var(--hull); border: 1px solid var(--line);

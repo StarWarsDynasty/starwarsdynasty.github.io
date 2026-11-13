@@ -745,7 +745,7 @@ loadAll().then(() => {
   // Teams dropdown in the top bar (opens on hover or keyboard focus; a click on "Teams" still goes to all teams).
   const menu = document.getElementById("team-menu");
   if (menu) {
-    menu.innerHTML = [...D.franchises].sort((x, y) => x.team_name.localeCompare(y.team_name))
+    menu.innerHTML = D.franchises
       .map((f) => `<a href="#/team/${f.id}" data-fid="${f.id}">${esc(f.team_name)}<small>${esc(f.owners)}</small></a>`).join("");
     const drop = menu.parentElement;
     menu.addEventListener("click", () => { drop.classList.add("closed"); document.activeElement?.blur(); });
