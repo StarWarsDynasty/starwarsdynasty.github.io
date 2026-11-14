@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-13T15:28:40+00:00",
+ "updated": "2026-11-14T11:55:11+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -51,7 +51,7 @@
     "pos": "TE",
     "nfl": "NE",
     "slot": "TE",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -283,7 +283,7 @@
     "pos": "WR",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -363,7 +363,7 @@
     "pos": "WR",
     "nfl": "MIA",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "DOUBTFUL",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -455,7 +455,7 @@
     "pos": "WR",
     "nfl": "JAX",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -545,7 +545,7 @@
     "pos": "RB",
     "nfl": "HOU",
     "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -600,16 +600,6 @@
     "acq_date": 1792653678141
    },
    {
-    "espn_id": "2573079",
-    "name": "Carson Wentz",
-    "pos": "QB",
-    "nfl": "MIN",
-    "slot": "Bench",
-    "injury": "QUESTIONABLE",
-    "acq_type": "ADD",
-    "acq_date": 1793866799325
-   },
-   {
     "espn_id": "4433971",
     "name": "Kyle McCord",
     "pos": "QB",
@@ -638,6 +628,16 @@
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1794472540023
+   },
+   {
+    "espn_id": "4429022",
+    "name": "Kayshon Boutte",
+    "pos": "WR",
+    "nfl": "HOU",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1794609013663
    }
   ],
   "k_mcmillan": [
@@ -949,7 +949,7 @@
     "pos": "WR",
     "nfl": "ATL",
     "slot": "Bench",
-    "injury": "DOUBTFUL",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1090,7 +1090,7 @@
     "name": "Keenan Allen",
     "pos": "WR",
     "nfl": "SF",
-    "slot": "Bench",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1160,8 +1160,8 @@
     "name": "Jordan Addison",
     "pos": "WR",
     "nfl": "MIN",
-    "slot": "FLEX",
-    "injury": "ACTIVE",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1221,7 +1221,7 @@
     "pos": "WR",
     "nfl": "HOU",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1333,7 +1333,7 @@
     "pos": "TE",
     "nfl": "CLE",
     "slot": "TE",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1433,7 +1433,7 @@
     "pos": "QB",
     "nfl": "MIN",
     "slot": "Bench",
-    "injury": "DOUBTFUL",
+    "injury": "OUT",
     "acq_type": "TRADE",
     "acq_date": 1787942567665
    },
@@ -1575,7 +1575,7 @@
     "pos": "RB",
     "nfl": "KC",
     "slot": "RB",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1737,7 +1737,7 @@
     "pos": "RB",
     "nfl": "JAX",
     "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1847,7 +1847,7 @@
     "pos": "WR",
     "nfl": "BAL",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1857,7 +1857,7 @@
     "pos": "TE",
     "nfl": "MIN",
     "slot": "SFLEX",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1867,7 +1867,7 @@
     "pos": "WR",
     "nfl": "NYJ",
     "slot": "WR",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1988,7 +1988,7 @@
     "name": "Omar Cooper Jr.",
     "pos": "WR",
     "nfl": "NYJ",
-    "slot": "WR",
+    "slot": "Bench",
     "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -2068,7 +2068,7 @@
     "name": "A.J. Brown",
     "pos": "WR",
     "nfl": "NE",
-    "slot": "Bench",
+    "slot": "WR",
     "injury": "QUESTIONABLE",
     "acq_type": "TRADE",
     "acq_date": 1792087623769
@@ -2141,7 +2141,7 @@
     "pos": "WR",
     "nfl": "DAL",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2201,7 +2201,7 @@
     "pos": "TE",
     "nfl": "BUF",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2353,7 +2353,7 @@
     "pos": "WR",
     "nfl": "SF",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2393,7 +2393,7 @@
     "pos": "RB",
     "nfl": "JAX",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2453,7 +2453,7 @@
     "pos": "RB",
     "nfl": "TEN",
     "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2483,7 +2483,7 @@
     "pos": "WR",
     "nfl": "SF",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2523,7 +2523,7 @@
     "pos": "QB",
     "nfl": "SEA",
     "slot": "QB",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1789629296944
    },
