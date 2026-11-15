@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-14T11:55:11+00:00",
+ "updated": "2026-11-15T11:56:57+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -201,7 +201,7 @@
     "pos": "TE",
     "nfl": "PIT",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "ADD",
     "acq_date": 1792654093331
    },
@@ -273,7 +273,7 @@
     "pos": "RB",
     "nfl": "NO",
     "slot": "Bench",
-    "injury": "INJURY_RESERVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1111,7 +1111,7 @@
     "pos": "RB",
     "nfl": "HOU",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1373,7 +1373,7 @@
     "pos": "RB",
     "nfl": "LAC",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1515,7 +1515,7 @@
     "pos": "RB",
     "nfl": "NE",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "INJURY_RESERVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1574,8 +1574,8 @@
     "name": "Kenneth Walker III",
     "pos": "RB",
     "nfl": "KC",
-    "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "slot": "Bench",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1674,7 +1674,7 @@
     "name": "Kimani Vidal",
     "pos": "RB",
     "nfl": "LAC",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1793457284133
@@ -1826,7 +1826,7 @@
     "name": "Emmett Johnson",
     "pos": "RB",
     "nfl": "KC",
-    "slot": "Bench",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1836,7 +1836,7 @@
     "name": "Alvin Kamara",
     "pos": "RB",
     "nfl": "NO",
-    "slot": "FLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1856,7 +1856,7 @@
     "name": "T.J. Hockenson",
     "pos": "TE",
     "nfl": "MIN",
-    "slot": "SFLEX",
+    "slot": "Bench",
     "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1906,7 +1906,7 @@
     "name": "Tank Dell",
     "pos": "WR",
     "nfl": "HOU",
-    "slot": "Bench",
+    "slot": "SFLEX",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1794471744011
@@ -2140,7 +2140,7 @@
     "name": "George Pickens",
     "pos": "WR",
     "nfl": "DAL",
-    "slot": "Bench",
+    "slot": "WR",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -2240,7 +2240,7 @@
     "name": "DJ Moore",
     "pos": "WR",
     "nfl": "BUF",
-    "slot": "WR",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
