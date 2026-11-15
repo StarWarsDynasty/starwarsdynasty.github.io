@@ -419,7 +419,7 @@ def build_team(ws, f, cur, nxt, step, contracts, trades, rosters, cfg):
     style(ws[f"C{r}"], f=font(color=INPUT_BLUE, bold=True))
     ws[f"D{r}"].border = BOX
 
-    ws.freeze_panes = "C4"
+    ws.freeze_panes = "A4"  # header rows only; no frozen columns
     ws.protection.sheet = True  # no password; Review > Unprotect Sheet to change anything
     ws.protection.formatCells = False
     ws.protection.formatColumns = False

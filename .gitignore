@@ -1,3 +1,4 @@
 upload_git_data.csh
+data/espn/raw_latest.json
 .DS_Store
 .swp

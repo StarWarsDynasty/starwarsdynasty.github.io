@@ -293,13 +293,6 @@ table.xl { border-collapse: separate; border-spacing: 0; font-size: .875rem; fon
 .xl .inj { color: #B3261E; font-weight: 600; font-size: .75rem; }
 .xl td[data-fx] { cursor: pointer; }
 .xl td.sel, .xl td[data-fx]:focus-visible { outline: 2px solid #1F7A4D; outline-offset: -2px; font-weight: 600; }
-/* Frozen panes: row numbers, slot and player stay put when the sheet scrolls sideways */
-.xl .fz0, .xl .fz1, .xl .fz2 { position: sticky; z-index: 1; }
-.xl th.fz0, .xl th.fz1, .xl th.fz2 { z-index: 2; }
-.xl .fz0 { left: 0; }
-.xl .fz1 { left: 2rem; width: 4.25rem; min-width: 4.25rem; max-width: 4.25rem; }
-.xl .fz2 { left: 2rem; box-shadow: 1px 0 0 #B8BED0; }
-.xl.has-slot .fz2 { left: 6.25rem; }
 .xl.planning select, .xl.planning input { color: #1B1F33; background: #fff; border: 1px solid #B8BED0; }
 .xl.planning .dim { color: #5A6180; }
 .xl .neg { color: #B3261E; } .xl .pos { color: #1E6B43; }
