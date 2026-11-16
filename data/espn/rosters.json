@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-15T11:56:57+00:00",
+ "updated": "2026-11-16T12:34:08+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -201,7 +201,7 @@
     "pos": "TE",
     "nfl": "PIT",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792654093331
    },
@@ -273,7 +273,7 @@
     "pos": "RB",
     "nfl": "NO",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -323,7 +323,7 @@
     "pos": "WR",
     "nfl": "CLE",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -363,7 +363,7 @@
     "pos": "WR",
     "nfl": "MIA",
     "slot": "Bench",
-    "injury": "DOUBTFUL",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -373,7 +373,7 @@
     "pos": "RB",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -434,8 +434,8 @@
     "name": "Rhamondre Stevenson",
     "pos": "RB",
     "nfl": "NE",
-    "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -485,7 +485,7 @@
     "pos": "QB",
     "nfl": "NE",
     "slot": "QB",
-    "injury": "ACTIVE",
+    "injury": "DOUBTFUL",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -545,7 +545,7 @@
     "pos": "RB",
     "nfl": "HOU",
     "slot": "RB",
-    "injury": "ACTIVE",
+    "injury": "DOUBTFUL",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -594,7 +594,7 @@
     "name": "DeMario Douglas",
     "pos": "WR",
     "nfl": "NE",
-    "slot": "FLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792653678141
@@ -767,7 +767,7 @@
     "pos": "WR",
     "nfl": "LAC",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1161,7 +1161,7 @@
     "pos": "WR",
     "nfl": "MIN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1525,7 +1525,7 @@
     "pos": "TE",
     "nfl": "LV",
     "slot": "TE",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1565,7 +1565,7 @@
     "pos": "WR",
     "nfl": "DET",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1585,7 +1585,7 @@
     "pos": "QB",
     "nfl": "NYJ",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1605,7 +1605,7 @@
     "pos": "WR",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1625,7 +1625,7 @@
     "pos": "QB",
     "nfl": "LAR",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1717,7 +1717,7 @@
     "pos": "WR",
     "nfl": "ATL",
     "slot": "WR",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1727,7 +1727,7 @@
     "pos": "QB",
     "nfl": "TB",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1867,7 +1867,7 @@
     "pos": "WR",
     "nfl": "NYJ",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2373,7 +2373,7 @@
     "pos": "WR",
     "nfl": "NYJ",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
