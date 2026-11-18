@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-17T12:05:28+00:00",
+ "updated": "2026-11-18T19:26:05+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -232,7 +232,7 @@
     "name": "Omarion Hampton",
     "pos": "RB",
     "nfl": "LAC",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -242,7 +242,7 @@
     "name": "Nico Collins",
     "pos": "WR",
     "nfl": "HOU",
-    "slot": "FLEX",
+    "slot": "WR",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -262,7 +262,7 @@
     "name": "Jadarian Price",
     "pos": "RB",
     "nfl": "SEA",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -272,7 +272,7 @@
     "name": "Travis Etienne Jr.",
     "pos": "RB",
     "nfl": "NO",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -283,7 +283,7 @@
     "pos": "WR",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -292,7 +292,7 @@
     "name": "Parker Washington",
     "pos": "WR",
     "nfl": "JAX",
-    "slot": "WR",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -312,7 +312,7 @@
     "name": "Rico Dowdle",
     "pos": "RB",
     "nfl": "PIT",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -322,7 +322,7 @@
     "name": "Denzel Boston",
     "pos": "WR",
     "nfl": "CLE",
-    "slot": "WR",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -342,7 +342,7 @@
     "name": "Jordyn Tyson",
     "pos": "WR",
     "nfl": "NO",
-    "slot": "Bench",
+    "slot": "WR",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -363,7 +363,7 @@
     "pos": "WR",
     "nfl": "MIA",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -656,7 +656,7 @@
     "name": "Matthew Stafford",
     "pos": "QB",
     "nfl": "LAR",
-    "slot": "QB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -666,7 +666,7 @@
     "name": "Michael Penix Jr.",
     "pos": "QB",
     "nfl": "ATL",
-    "slot": "SFLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -676,7 +676,7 @@
     "name": "Bucky Irving",
     "pos": "RB",
     "nfl": "TB",
-    "slot": "Bench",
+    "slot": "SFLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -716,7 +716,7 @@
     "name": "Josh Downs",
     "pos": "WR",
     "nfl": "KC",
-    "slot": "FLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -736,7 +736,7 @@
     "name": "Caleb Williams",
     "pos": "QB",
     "nfl": "CHI",
-    "slot": "Bench",
+    "slot": "QB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -746,8 +746,8 @@
     "name": "Luther Burden III",
     "pos": "WR",
     "nfl": "CHI",
-    "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -767,7 +767,7 @@
     "pos": "WR",
     "nfl": "LAC",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -786,7 +786,7 @@
     "name": "Jake Bates",
     "pos": "K",
     "nfl": "DET",
-    "slot": "K",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -846,7 +846,7 @@
     "name": "Chase McLaughlin",
     "pos": "K",
     "nfl": "TB",
-    "slot": "Bench",
+    "slot": "K",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792085421404
@@ -939,7 +939,7 @@
     "pos": "WR",
     "nfl": "PHI",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1221,7 +1221,7 @@
     "pos": "WR",
     "nfl": "HOU",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1292,7 +1292,7 @@
     "name": "Bo Nix",
     "pos": "QB",
     "nfl": "DEN",
-    "slot": "Bench",
+    "slot": "QB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1312,7 +1312,7 @@
     "name": "Emeka Egbuka",
     "pos": "WR",
     "nfl": "TB",
-    "slot": "Bench",
+    "slot": "SFLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1332,7 +1332,7 @@
     "name": "Harold Fannin Jr.",
     "pos": "TE",
     "nfl": "CLE",
-    "slot": "TE",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1352,7 +1352,7 @@
     "name": "Deshaun Watson",
     "pos": "QB",
     "nfl": "CLE",
-    "slot": "QB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1382,7 +1382,7 @@
     "name": "Kenyon Sadiq",
     "pos": "TE",
     "nfl": "NYJ",
-    "slot": "Bench",
+    "slot": "TE",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1392,8 +1392,8 @@
     "name": "Kyle Monangai",
     "pos": "RB",
     "nfl": "CHI",
-    "slot": "Bench",
-    "injury": "OUT",
+    "slot": "RB",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1402,7 +1402,7 @@
     "name": "Kaelon Black",
     "pos": "RB",
     "nfl": "SF",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1482,7 +1482,7 @@
     "name": "Eli Raridon",
     "pos": "TE",
     "nfl": "NE",
-    "slot": "SFLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1793870201429
@@ -1574,8 +1574,8 @@
     "name": "Kenneth Walker III",
     "pos": "RB",
     "nfl": "KC",
-    "slot": "Bench",
-    "injury": "OUT",
+    "slot": "RB",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1605,7 +1605,7 @@
     "pos": "WR",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "INJURY_RESERVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1654,7 +1654,7 @@
     "name": "Seth McGowan",
     "pos": "RB",
     "nfl": "IND",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792717110290
@@ -1674,7 +1674,7 @@
     "name": "Kimani Vidal",
     "pos": "RB",
     "nfl": "LAC",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1793457284133
@@ -1684,7 +1684,7 @@
     "name": "Corey Kiner",
     "pos": "RB",
     "nfl": "NE",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1794471744009
@@ -1706,7 +1706,7 @@
     "name": "Breece Hall",
     "pos": "RB",
     "nfl": "NYJ",
-    "slot": "RB",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1716,7 +1716,7 @@
     "name": "Drake London",
     "pos": "WR",
     "nfl": "ATL",
-    "slot": "WR",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1726,7 +1726,7 @@
     "name": "Baker Mayfield",
     "pos": "QB",
     "nfl": "TB",
-    "slot": "Bench",
+    "slot": "QB",
     "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1756,7 +1756,7 @@
     "name": "D'Andre Swift",
     "pos": "RB",
     "nfl": "CHI",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1766,7 +1766,7 @@
     "name": "Daniel Jones",
     "pos": "QB",
     "nfl": "IND",
-    "slot": "QB",
+    "slot": "SFLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1776,8 +1776,8 @@
     "name": "DeVonta Smith",
     "pos": "WR",
     "nfl": "PHI",
-    "slot": "Bench",
-    "injury": "OUT",
+    "slot": "WR",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1826,7 +1826,7 @@
     "name": "Emmett Johnson",
     "pos": "RB",
     "nfl": "KC",
-    "slot": "FLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1857,7 +1857,7 @@
     "pos": "TE",
     "nfl": "MIN",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1906,7 +1906,7 @@
     "name": "Tank Dell",
     "pos": "WR",
     "nfl": "HOU",
-    "slot": "SFLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1794471744011
@@ -2240,7 +2240,7 @@
     "name": "DJ Moore",
     "pos": "WR",
     "nfl": "BUF",
-    "slot": "Bench",
+    "slot": "WR",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -2280,7 +2280,7 @@
     "name": "Stefon Diggs",
     "pos": "WR",
     "nfl": "WSH",
-    "slot": "WR",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -2353,7 +2353,7 @@
     "pos": "WR",
     "nfl": "SF",
     "slot": "Bench",
-    "injury": "OUT",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
