@@ -2,7 +2,7 @@ name: ESPN sync
 
 on:
   schedule:
-    - cron: "17 11 * * *"   # daily, 4:17 AM Pacific (11:17 UTC)
+    - cron: "15 9 * * *"   # daily, 2:15 AM Pacific (9:15 UTC)
   workflow_dispatch:
     inputs:
       dry_run:
