@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-20T11:57:58+00:00",
+ "updated": "2026-11-21T16:45:16+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -343,7 +343,7 @@
     "pos": "WR",
     "nfl": "NO",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -363,7 +363,7 @@
     "pos": "WR",
     "nfl": "MIA",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -413,7 +413,7 @@
     "pos": "WR",
     "nfl": "WSH",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "ADD",
     "acq_date": 1793866799325
    },
@@ -455,7 +455,7 @@
     "pos": "WR",
     "nfl": "JAX",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -485,7 +485,7 @@
     "pos": "QB",
     "nfl": "NE",
     "slot": "Bench",
-    "injury": "DOUBTFUL",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -525,7 +525,7 @@
     "pos": "RB",
     "nfl": "BUF",
     "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -620,16 +620,6 @@
     "acq_date": 1794471744011
    },
    {
-    "espn_id": "4710855",
-    "name": "Konata Mumpfield",
-    "pos": "WR",
-    "nfl": "LAR",
-    "slot": "Bench",
-    "injury": "ACTIVE",
-    "acq_type": "ADD",
-    "acq_date": 1794472540023
-   },
-   {
     "espn_id": "4429022",
     "name": "Kayshon Boutte",
     "pos": "WR",
@@ -638,6 +628,16 @@
     "injury": "QUESTIONABLE",
     "acq_type": "ADD",
     "acq_date": 1794609013663
+   },
+   {
+    "espn_id": "4240391",
+    "name": "Tommy DeVito",
+    "pos": "QB",
+    "nfl": "NE",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1795275988189
    }
   ],
   "k_mcmillan": [
@@ -879,7 +879,7 @@
     "pos": "WR",
     "nfl": "DEN",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -929,7 +929,7 @@
     "pos": "WR",
     "nfl": "PHI",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1100,8 +1100,8 @@
     "name": "Rachaad White",
     "pos": "RB",
     "nfl": "WSH",
-    "slot": "SFLEX",
-    "injury": "ACTIVE",
+    "slot": "Bench",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1120,7 +1120,7 @@
     "name": "Pat Bryant",
     "pos": "WR",
     "nfl": "DEN",
-    "slot": "Bench",
+    "slot": "SFLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1393,7 +1393,7 @@
     "pos": "WR",
     "nfl": "MIA",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1554,8 +1554,8 @@
     "name": "Kenneth Walker III",
     "pos": "RB",
     "nfl": "KC",
-    "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "slot": "Bench",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1565,7 +1565,7 @@
     "pos": "QB",
     "nfl": "NYJ",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1654,20 +1654,10 @@
     "name": "Kimani Vidal",
     "pos": "RB",
     "nfl": "LAC",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1793457284133
-   },
-   {
-    "espn_id": "4431431",
-    "name": "Corey Kiner",
-    "pos": "RB",
-    "nfl": "NE",
-    "slot": "Bench",
-    "injury": "ACTIVE",
-    "acq_type": "ADD",
-    "acq_date": 1794471744009
    },
    {
     "espn_id": "4569682",
@@ -1678,6 +1668,16 @@
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1794471744009
+   },
+   {
+    "espn_id": "3116365",
+    "name": "Mark Andrews",
+    "pos": "TE",
+    "nfl": "BAL",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1795184530371
    }
   ],
   "turner": [
@@ -1717,7 +1717,7 @@
     "pos": "RB",
     "nfl": "JAX",
     "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1837,7 +1837,7 @@
     "pos": "TE",
     "nfl": "MIN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1969,7 +1969,7 @@
     "pos": "WR",
     "nfl": "NYJ",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2049,7 +2049,7 @@
     "pos": "WR",
     "nfl": "NE",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "DOUBTFUL",
     "acq_type": "TRADE",
     "acq_date": 1792087623769
    },
@@ -2181,7 +2181,7 @@
     "pos": "TE",
     "nfl": "BUF",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "DOUBTFUL",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
