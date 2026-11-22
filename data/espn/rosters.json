@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-22T02:01:11+00:00",
+ "updated": "2026-11-22T17:07:09+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -283,7 +283,7 @@
     "pos": "WR",
     "nfl": "TEN",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -373,7 +373,7 @@
     "pos": "RB",
     "nfl": "TEN",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -615,7 +615,7 @@
     "pos": "TE",
     "nfl": "CAR",
     "slot": "TE",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1794471744011
    },
@@ -1504,7 +1504,7 @@
     "name": "Brock Bowers",
     "pos": "TE",
     "nfl": "LV",
-    "slot": "TE",
+    "slot": "Bench",
     "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1665,7 +1665,7 @@
     "pos": "RB",
     "nfl": "NO",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "ADD",
     "acq_date": 1794471744009
    },
@@ -1674,7 +1674,7 @@
     "name": "Mark Andrews",
     "pos": "TE",
     "nfl": "BAL",
-    "slot": "Bench",
+    "slot": "TE",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1795184530371
@@ -1707,7 +1707,7 @@
     "pos": "QB",
     "nfl": "TB",
     "slot": "QB",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -2181,7 +2181,7 @@
     "pos": "TE",
     "nfl": "BUF",
     "slot": "Bench",
-    "injury": "DOUBTFUL",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
