@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-23T21:16:34+00:00",
+ "updated": "2026-11-24T03:59:05+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -707,7 +707,7 @@
     "pos": "TE",
     "nfl": "DET",
     "slot": "TE",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1101,7 +1101,7 @@
     "pos": "RB",
     "nfl": "WSH",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1919,7 +1919,7 @@
     "pos": "RB",
     "nfl": "LAR",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -2019,7 +2019,7 @@
     "pos": "TE",
     "nfl": "PHI",
     "slot": "TE",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "ADD",
     "acq_date": 1791484842264
    },
@@ -2049,7 +2049,7 @@
     "pos": "QB",
     "nfl": "PHI",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "TRADE",
     "acq_date": 1792087623769
    },
