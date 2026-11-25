@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-24T20:08:08+00:00",
+ "updated": "2026-11-25T03:33:26+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -71,7 +71,7 @@
     "pos": "RB",
     "nfl": "PHI",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -454,7 +454,7 @@
     "name": "Jakobi Meyers",
     "pos": "WR",
     "nfl": "JAX",
-    "slot": "WR",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -514,7 +514,7 @@
     "name": "Christian Watson",
     "pos": "WR",
     "nfl": "GB",
-    "slot": "FLEX",
+    "slot": "WR",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -574,7 +574,7 @@
     "name": "Jacory Croskey-Merritt",
     "pos": "RB",
     "nfl": "WSH",
-    "slot": "Bench",
+    "slot": "FLEX",
     "injury": "ACTIVE",
     "acq_type": "TRADE",
     "acq_date": 1790061510065
@@ -707,7 +707,7 @@
     "pos": "TE",
     "nfl": "DET",
     "slot": "TE",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -869,16 +869,6 @@
     "pos": "TE",
     "nfl": "IND",
     "slot": "TE",
-    "injury": "ACTIVE",
-    "acq_type": "DRAFT",
-    "acq_date": 1787886221993
-   },
-   {
-    "espn_id": "4372016",
-    "name": "Jaylen Waddle",
-    "pos": "WR",
-    "nfl": "DEN",
-    "slot": "WR",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1273,7 +1263,7 @@
     "pos": "RB",
     "nfl": "DEN",
     "slot": "Bench",
-    "injury": "ACTIVE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1282,7 +1272,7 @@
     "name": "Emeka Egbuka",
     "pos": "WR",
     "nfl": "TB",
-    "slot": "SFLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1322,7 +1312,7 @@
     "name": "Deshaun Watson",
     "pos": "QB",
     "nfl": "CLE",
-    "slot": "Bench",
+    "slot": "SFLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1494,7 +1484,7 @@
     "name": "Brock Bowers",
     "pos": "TE",
     "nfl": "LV",
-    "slot": "Bench",
+    "slot": "TE",
     "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1544,7 +1534,7 @@
     "name": "Kenneth Walker III",
     "pos": "RB",
     "nfl": "KC",
-    "slot": "Bench",
+    "slot": "RB",
     "injury": "QUESTIONABLE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1564,16 +1554,6 @@
     "name": "Jonathon Brooks",
     "pos": "RB",
     "nfl": "CAR",
-    "slot": "Bench",
-    "injury": "INJURY_RESERVE",
-    "acq_type": "DRAFT",
-    "acq_date": 1787886221994
-   },
-   {
-    "espn_id": "4569587",
-    "name": "Wan'Dale Robinson",
-    "pos": "WR",
-    "nfl": "TEN",
     "slot": "Bench",
     "injury": "INJURY_RESERVE",
     "acq_type": "DRAFT",
@@ -1604,7 +1584,7 @@
     "name": "DK Metcalf",
     "pos": "WR",
     "nfl": "PIT",
-    "slot": "FLEX",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1790406633342
@@ -1624,7 +1604,7 @@
     "name": "Seth McGowan",
     "pos": "RB",
     "nfl": "IND",
-    "slot": "RB",
+    "slot": "Bench",
     "injury": "OUT",
     "acq_type": "ADD",
     "acq_date": 1792717110290
@@ -1664,10 +1644,20 @@
     "name": "Mark Andrews",
     "pos": "TE",
     "nfl": "BAL",
-    "slot": "TE",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1795184530371
+   },
+   {
+    "espn_id": "4372016",
+    "name": "Jaylen Waddle",
+    "pos": "WR",
+    "nfl": "DEN",
+    "slot": "FLEX",
+    "injury": "ACTIVE",
+    "acq_type": "TRADE",
+    "acq_date": 1795566897832
    }
   ],
   "turner": [
@@ -2009,7 +1999,7 @@
     "pos": "TE",
     "nfl": "PHI",
     "slot": "TE",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1791484842264
    },
@@ -2039,7 +2029,7 @@
     "pos": "QB",
     "nfl": "PHI",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "TRADE",
     "acq_date": 1792087623769
    },
