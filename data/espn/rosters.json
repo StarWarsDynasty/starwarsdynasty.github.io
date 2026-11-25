@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-25T03:33:26+00:00",
+ "updated": "2026-11-25T19:13:55+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -60,7 +60,7 @@
     "name": "Tucker Kraft",
     "pos": "TE",
     "nfl": "GB",
-    "slot": "Bench",
+    "slot": "TE",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -200,7 +200,7 @@
     "name": "Pat Freiermuth",
     "pos": "TE",
     "nfl": "PIT",
-    "slot": "TE",
+    "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1792654093331
@@ -1535,7 +1535,7 @@
     "pos": "RB",
     "nfl": "KC",
     "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
