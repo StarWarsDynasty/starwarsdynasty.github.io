@@ -26,3 +26,5 @@ date,season,type,player,franchise,to_franchise,detail
 2026-11-24,2026,trade,Cam Ward,tusa_chen,armijo_pendleton,contract moves with player
 2026-11-25,2026,release,Wan'Dale Robinson,talaric_patch,,"rookie deal, no dead money"
 2026-11-25,2026,trade,Jaylen Waddle,tusa_chen,talaric_patch,contract moves with player
+2026-11-26,2026,release,JK Dobbins,armijo_pendleton,,"dead money $7/yr, 2026-2026"
+2026-11-26,2026,release,Rashid Shaheed,talaric_patch,,"dead money $2/yr, 2026-2026"
