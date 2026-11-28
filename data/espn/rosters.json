@@ -1,7 +1,7 @@
 {
  "source": "espn",
  "season": 2026,
- "updated": "2026-11-27T18:56:02+00:00",
+ "updated": "2026-11-28T17:29:58+00:00",
  "draft_complete": true,
  "teams": {
   "renbarger": [
@@ -223,7 +223,7 @@
     "pos": "QB",
     "nfl": "LAC",
     "slot": "SFLEX",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -303,7 +303,7 @@
     "pos": "TE",
     "nfl": "NYG",
     "slot": "TE",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -393,7 +393,7 @@
     "pos": "TE",
     "nfl": "NO",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -455,7 +455,7 @@
     "pos": "WR",
     "nfl": "JAX",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -545,7 +545,7 @@
     "pos": "RB",
     "nfl": "HOU",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -615,7 +615,7 @@
     "pos": "WR",
     "nfl": "HOU",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "ADD",
     "acq_date": 1794609013663
    },
@@ -630,14 +630,14 @@
     "acq_date": 1795275988189
    },
    {
-    "espn_id": "4431268",
-    "name": "Chimere Dike",
-    "pos": "WR",
-    "nfl": "TEN",
+    "espn_id": "11394",
+    "name": "Josh Johnson",
+    "pos": "QB",
+    "nfl": "ARI",
     "slot": "Bench",
     "injury": "ACTIVE",
     "acq_type": "ADD",
-    "acq_date": 1795682431542
+    "acq_date": 1795809361971
    }
   ],
   "k_mcmillan": [
@@ -1161,7 +1161,7 @@
     "pos": "WR",
     "nfl": "MIN",
     "slot": "Bench",
-    "injury": "DOUBTFUL",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1211,7 +1211,7 @@
     "pos": "WR",
     "nfl": "SEA",
     "slot": "WR",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1363,7 +1363,7 @@
     "pos": "RB",
     "nfl": "LAC",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -1423,7 +1423,7 @@
     "pos": "QB",
     "nfl": "MIN",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "TRADE",
     "acq_date": 1787942567665
    },
@@ -1650,16 +1650,6 @@
     "acq_date": 1793457284133
    },
    {
-    "espn_id": "3116365",
-    "name": "Mark Andrews",
-    "pos": "TE",
-    "nfl": "BAL",
-    "slot": "Bench",
-    "injury": "ACTIVE",
-    "acq_type": "ADD",
-    "acq_date": 1795184530371
-   },
-   {
     "espn_id": "4372016",
     "name": "Jaylen Waddle",
     "pos": "WR",
@@ -1698,6 +1688,16 @@
     "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1795794558643
+   },
+   {
+    "espn_id": "4429086",
+    "name": "Michael Mayer",
+    "pos": "TE",
+    "nfl": "LV",
+    "slot": "Bench",
+    "injury": "ACTIVE",
+    "acq_type": "ADD",
+    "acq_date": 1795880628779
    }
   ],
   "turner": [
@@ -1706,7 +1706,7 @@
     "name": "Breece Hall",
     "pos": "RB",
     "nfl": "NYJ",
-    "slot": "SFLEX",
+    "slot": "RB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -1736,8 +1736,8 @@
     "name": "Bhayshul Tuten",
     "pos": "RB",
     "nfl": "JAX",
-    "slot": "RB",
-    "injury": "QUESTIONABLE",
+    "slot": "Bench",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
    },
@@ -1856,7 +1856,7 @@
     "name": "T.J. Hockenson",
     "pos": "TE",
     "nfl": "MIN",
-    "slot": "Bench",
+    "slot": "SFLEX",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -1918,7 +1918,7 @@
     "name": "Patriots D/ST",
     "pos": "D/ST",
     "nfl": "NE",
-    "slot": "Bench",
+    "slot": "D/ST",
     "injury": "",
     "acq_type": "DRAFT",
     "acq_date": 1787886221993
@@ -2048,7 +2048,7 @@
     "name": "49ers D/ST",
     "pos": "D/ST",
     "nfl": "SF",
-    "slot": "D/ST",
+    "slot": "Bench",
     "injury": "",
     "acq_type": "ADD",
     "acq_date": 1792049467725
@@ -2181,7 +2181,7 @@
     "pos": "RB",
     "nfl": "BAL",
     "slot": "FLEX",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2230,8 +2230,8 @@
     "name": "Brock Purdy",
     "pos": "QB",
     "nfl": "SF",
-    "slot": "QB",
-    "injury": "QUESTIONABLE",
+    "slot": "Bench",
+    "injury": "OUT",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
    },
@@ -2260,7 +2260,7 @@
     "name": "Kirk Cousins",
     "pos": "QB",
     "nfl": "MIN",
-    "slot": "Bench",
+    "slot": "QB",
     "injury": "ACTIVE",
     "acq_type": "DRAFT",
     "acq_date": 1787886221994
@@ -2331,7 +2331,7 @@
     "pos": "WR",
     "nfl": "CIN",
     "slot": "WR",
-    "injury": "ACTIVE",
+    "injury": "QUESTIONABLE",
     "acq_type": "TRADE",
     "acq_date": 1795312515180
    }
@@ -2493,7 +2493,7 @@
     "pos": "QB",
     "nfl": "SEA",
     "slot": "Bench",
-    "injury": "QUESTIONABLE",
+    "injury": "ACTIVE",
     "acq_type": "ADD",
     "acq_date": 1789629296944
    },
